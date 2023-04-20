@@ -1,16 +1,10 @@
 // react dom import 
 import {
     createBrowserRouter ,
-    BrowserRouter as Router,
-    Routes,
     Route,
-    Link,
     createRoutesFromElements,
-    RouterProvider,
-    Form
   } from "react-router-dom";
   
-
 // importing pages
 
 import Login from '../Pages/User/Login';
@@ -29,12 +23,6 @@ import { Market } from "../Pages/Main_Pages/Market";
 import { Laboratory } from "../Pages/Main_Pages/Laboratory";
 import { Forms } from "../Layout/Forms";
 
-
-
-
-
-
-
 // creating react-routers 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -52,13 +40,16 @@ const router = createBrowserRouter(
           <Route path="market" element={<Market/>}/>
           <Route path="lab"   element={<Laboratory/>}/>
           <Route path="profile" element={<Profile/>}></Route>
-        </Route>
 
-        <Route path="/form" element={<Forms/>}>
+          <Route path="form" element={<Forms/>}>
             <Route path="nurf" element={<NurseryForm/>}></Route>
             <Route path="marketf" element={<MarketForm/>}/>
             <Route path="labf" element={<LaboratoryForm/>}/>
         </Route>
+
+        </Route>
+
+        
 
       </Route>
   
