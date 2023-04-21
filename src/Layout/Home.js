@@ -1,13 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link, Outlet } from 'react-router-dom'
+import HomeNavbar from '../Component/HomeNavbar'
 
 function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <Link to='/user/login'>Login</Link>
+      <HomeNavbar />
+      {/* <Link to='/user/login'>Login</Link>
       <br/>
-      <Link to={'user/regi'}>Register</Link>
+      <Link to={'user/regi'}>Register</Link> */}
     </div>
   )
 }
