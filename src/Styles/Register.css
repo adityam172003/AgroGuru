@@ -1,0 +1,15 @@
+input{
+    display: block;
+    width: 25%;
+    margin: auto;
+    display: block;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+}
+
+p{
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+}
