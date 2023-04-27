@@ -3,9 +3,14 @@ import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import '../../Styles/Register.css'
+import axios from 'axios'
+import { redirect } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+
 
 const Login = () => {
-
+    const nevigate = useNavigate();
     const schema = yup.object().shape({
         email: yup.string().email().required(),
         password: yup.string().min(4).max(20).required(),
@@ -15,8 +20,41 @@ const Login = () => {
         resolver: yupResolver(schema)
     });
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit =async (data) => {
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          }
+      
+   
+      let status=200;
+      await axios.post('/user/login' , {data} ,axiosConfig)
+      .then(dat=>{
+        
+        alert("logged in");
+       
+
+        })
+       .catch(err=>{
+        
+        
+         status= (err.response.status);
+        
+     
+        })
+
+       if(status==200)
+       {
+        nevigate('/main/about');
+       }
+       else
+       {
+        alert("register first")
+        nevigate('/user/regi')
+       }
+      
     }
 
     return (
