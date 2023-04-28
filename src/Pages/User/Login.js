@@ -4,7 +4,7 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import '../../Styles/Register.css'
 import axios from 'axios'
-import { redirect } from 'react-router-dom'
+// import { redirect } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 

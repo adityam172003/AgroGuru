@@ -1,11 +1,10 @@
 import React from 'react'
-// import { Outlet } from 'react-router-dom'
-import HomeNavbar from '../Component/HomeNavbar'
+import { Outlet } from 'react-router-dom'
 
 export const Forms = () => {
   return (
     <>
-        <HomeNavbar />
+        <Outlet/>
     </>
   )
 }
