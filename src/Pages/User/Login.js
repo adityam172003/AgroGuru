@@ -27,14 +27,25 @@ const Login = () => {
                 "Access-Control-Allow-Origin": "*",
             }
           }
-      
+      let Locate={
+        longit:"",
+        latit:""
+      }
    
       let status=200;
-      await axios.post('/user/login' , {data} ,axiosConfig)
+          
+      navigator.geolocation.getCurrentPosition(function(position) {
+        console.log("Latitude is :", position.coords.latitude);
+
+        console.log("Longitude is :", position.coords.longitude);
+      });
+
+      await axios.post('/user/login' , {data,Locate} ,axiosConfig)
       .then(dat=>{
         
         alert("logged in");
        
+
 
         })
        .catch(err=>{

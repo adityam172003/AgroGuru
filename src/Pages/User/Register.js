@@ -4,10 +4,14 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import axios from 'axios'
 import * as yup from 'yup'
 import '../../Styles/Register.css'
-import { redirect } from 'react-router-dom'
+import { redirect } from 'react-router-dom';
+
+
+
+
 
 const Register = () => {
-
+   
     const schema = yup.object().shape({
         name: yup.string().required("Your full name is required !"),
         email: yup.string().email().required(),
@@ -20,8 +24,19 @@ const Register = () => {
         resolver: yupResolver(schema)
     });
 
+
+
+
+
     const onSubmit =async (data) => {
+        
+
+        // taking longitude and lattitude 
       
+
+
+
+
     let axiosConfig = {
         headers: {
             'Content-Type': 'application/json;charset=UTF-8',
