@@ -1,4 +1,4 @@
-.HomeNavbar {
+.HomeNavbar, .MainNavbar {
     width: 100%;
     height: 80px;
     background-color: indianred;
@@ -18,7 +18,7 @@
     color: white;
     margin-left: 20px;
     font-size: 25px;
-    margin: auto 200px;
+    margin: auto 40px;
 }
 
 .links a:hover{

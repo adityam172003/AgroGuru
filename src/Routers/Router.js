@@ -40,8 +40,6 @@ const router = createBrowserRouter(
           <Route path='crop'   element={<CropPredict/>} ></Route>
           <Route path='nur'    element={<Nursery/>} ></Route>
           <Route path="market" element={<Market/>}/>
-          <Route path="lab"    element={<Laboratory/>}/>
-          <Route path="profile"element={<Profile/>}></Route>
           <Route path="lab"   element={<Laboratory/>}/>
           <Route path="profile" element={<Profile/>}></Route>
           <Route path="info"   element={<Info />}/>
