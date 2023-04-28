@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import '../../Styles/Register.css'
-
+import axios from 'axios'
 
 const NurseryForm = () => {
-    
+    const [lgt ,setlgt] = useState(0.0);
+    const [lgn ,setlgn] = useState(0.0);
     const schema = yup.object().shape({
         name: yup.string().required("Nursery name is required"),
         address: yup.string().required("Address must be provided"),
@@ -26,8 +27,70 @@ const NurseryForm = () => {
     });
 
     const onSubmit =async (data) => {
-      console.log(data);
+     
+      
+        let axiosConfig;
+      
+       
+      navigator.geolocation.getCurrentPosition( async function(position) {
+       
+       
+          setlgt(position.coords.longitude);
+      
+          setlgn(position.coords.latitude);
+        
+      })
+      
+
+      axiosConfig = {
+        params: {
+          lng:JSON.stringify(lgn),
+          ltd:JSON.stringify(lgt)
+        },
+        
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*",
+        }
+        
+      }
+     
+      let status=200;
+          
+   
+
+      await axios.post('/nursery/register' , {data} ,axiosConfig)
+      .then(dat=>{
+        
+        // use state to set form
+       
+
+
+        })
+       .catch(err=>{
+        
+        
+         status= (err.response.status);
+        
+     
+        })
+
+       if(status==200)
+       {
+        alert("nursery added successfully")
+       }
+       else
+       {
+        alert("Internal server error");
+       
+       }
+      
+  
+    
+
+    
     }
+    
 
 
     return (
