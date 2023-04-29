@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#nursery_page{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/assets/nur_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#nur_back{
+    background: transparent;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+
+}
+#nur_form_cnt{
+    margin-top: 3rem;
+    width: 40%;
+    height: fit-content;
+    box-shadow: 0 0 100px 10px;
+    border-radius: 50px;
+    font-family: 'poppins',sans-serif;
+    background-image: url('../../public/assets/nur_img.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+
+}
+#nur_form_back{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 50px;
+ 
+
+}
+#nur_form{
+    width: 100%;
+    display: grid;
+    justify-items: baseline;
+    align-items: center;
+    padding-left: 5rem;
+    backdrop-filter: blur(25px);
+}
+
+#nur_form_cnt h2{
+     padding: 2rem;
+     color: #385b04;
+}
+#nur_form_cnt input,#nur_form_cnt button{
+    width: 27rem;
+    margin-bottom: .5rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+#nur_times{
+    display: flex;
+    gap: 0rem;
+}
+#nur_times input{
+    width: 6rem;
+}
+#nur_form_cnt label{
+    padding-left: .5rem;
+    font-weight: 500;
+    color: #c6f090;
+}
+#nur_form_cnt input{
+    padding-left: 1rem;
+    background-color: #92a871;
+    box-shadow: 0 0 8px -2px black;
+    color: #26370f;
+    font-weight: 600;
+    color: #26370f;
+
+}
+#nur_form_cnt button{
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    background-color:#92a871;
+    box-shadow: 0 0 10px -2px black;
+
+}
+#nur_form_cnt p{
+    padding-top: 0;
+    padding-left: 1rem;
+    margin: 0;
+    font-size: .8rem;
+}
