@@ -2,7 +2,7 @@ import React, { useEffect,useState } from 'react'
 import axios from 'axios'
 
 export const Nursery = () => {
-
+const [nurs,setnurs] = useState([])
   const [lgt ,setlgt] = useState(0.0);
   const [lgn ,setlgn] = useState(0.0);
 
@@ -26,8 +26,12 @@ export const Nursery = () => {
         lat:JSON.stringify(lgt)
       }
     })
-    .then((data)=>{
-      console.log(data);
+    .then((dat)=>{
+     
+      const data=dat.data;
+      setnurs(data);
+      console.log(nurs)
+      
 
     })
     .catch((err)=>{
@@ -37,9 +41,38 @@ export const Nursery = () => {
 
   useEffect(()=>{
     getNursery();
-  })
+  },[])
 
   return (
+   <>
     <div>Nursery</div>
+    
+    {
+      nurs.map((it)=>(
+        <>  
+        <h1>{it.name}</h1>
+        
+        {
+            (it.Items)?it.Items.map((i)=>(
+              <>
+              <h2>{i.itemname}</h2>
+             
+              <img
+               src={`http://localhost:8080/uploads/${i.photo}`}
+               >
+             </img>
+              </>
+            )):'-'
+           
+        }
+       
+
+        
+       
+
+        </>
+      ))
+    }
+   </>
   )
 }
