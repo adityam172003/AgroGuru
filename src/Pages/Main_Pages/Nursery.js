@@ -51,7 +51,10 @@ const [nurs,setnurs] = useState([])
       nurs.map((it)=>(
         <>  
         <h1>{it.name}</h1>
-        
+        <img
+               src={`http://localhost:8080/uploads/${it.nurseryImage}`}
+               >
+             </img>
         {
             (it.Items)?it.Items.map((i)=>(
               <>

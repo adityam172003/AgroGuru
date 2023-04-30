@@ -4,8 +4,12 @@ import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import '../../Styles/nursery_form_ui.css'
 import axios from 'axios'
+var bodyFormData = new FormData();
+
+
 
 const NurseryForm = () => {
+    const [nurseryImage ,setnurseryImage] = useState('');
     const [lgt ,setlgt] = useState(0.0);
     const [lgn ,setlgn] = useState(0.0);
     const schema = yup.object().shape({
@@ -41,6 +45,12 @@ const NurseryForm = () => {
         
       })
       
+      bodyFormData.append('nurseryImage',nurseryImage)
+      bodyFormData.append('name',data.name)
+      bodyFormData.append('phone',data.phone)
+      bodyFormData.append('address',data.address)
+      bodyFormData.append('openTime',data.openTime)
+      bodyFormData.append('closeTime',data.closeTime    )
 
       axiosConfig = {
         params: {
@@ -49,7 +59,7 @@ const NurseryForm = () => {
         },
         
         headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
+            'Content-Type': "multipart/form-data",
             "Access-Control-Allow-Origin": "*",
         }
         
@@ -59,7 +69,7 @@ const NurseryForm = () => {
           
    
 
-      await axios.post('/nursery/register' , {data} ,axiosConfig)
+      await axios.post('/nursery/register' , bodyFormData ,axiosConfig)
       .then(dat=>{
         
         // use state to set form
@@ -153,6 +163,12 @@ const NurseryForm = () => {
                        <label for="nur_off_day">Enter Off Day</label><br/>
                        <input type="text" id="nur_off_day"{...register("offDay")}/>
                        <p>{errors.offDay?.message}</p>
+                   </div>
+                   <div>
+                    
+                    <input type='file' onChange={(e)=>{
+                        setnurseryImage(e.target.files[0]);
+                    }} ></input>
                    </div>
                    <div><button>Submit</button></div>
                </form>
