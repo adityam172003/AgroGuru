@@ -1,6 +1,11 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
-
+import '../../Styles/nursery_page_ui.css'
+import ReactDOM from 'react-dom';
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+<link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
 export const Nursery = () => {
 const [nurs,setnurs] = useState([])
   const [lgt ,setlgt] = useState(0.0);
@@ -41,11 +46,52 @@ const [nurs,setnurs] = useState([])
 
   useEffect(()=>{
     getNursery();
-  },[])
-
+  },[]) 
+  // console.log(data)
   return (
    <>
-    <div>Nursery</div>
+   <section id="nur_page">
+       
+       <div id="nur_news_cl"></div>
+  
+       <section id="nur_gallery">
+           <div id="nur_title">Plant Nurseries in Pune</div>
+           {
+            nurs.map((it)=>(<div id="nur_cart">
+               <div id="nur_img_n_cnt">
+                   <div id="img_dv"><img src={`http://localhost:8080/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
+                   <div>
+                       <p id="nur_name">{it.name}</p>
+                       <p id="nur_addr">{it.address}</p>
+                       <div id="nur_tm">
+                           <div><span id="optime">open </span>{it.timing.opening}</div>
+                           <div><span id="cltime">close </span>{it.timing.closing}</div>
+                       </div>
+                       <div id="nur_pg_phone">
+                           <div class="but" id="nur_phone">{it.phone}</div>
+                           <button class="but" id="nur_map">map</button>
+                       </div>
+                   </div>
+               </div>
+               <div id="nur_cart_imgs">
+               <Carousel  showThumbs={false}  autoPlay={true}  >
+               {
+            (it.Items)?it.Items.map((i)=>(
+              <>
+              <div className='item_img'>
+                    <img src={`http://localhost:8080/uploads/${i.photo}`} width={200} height={250}/>
+                </div>
+              </>
+            )):'/'
+           
+           }
+                
+            </Carousel>
+               </div>
+           </div>))}
+       </section>
+   </section>
+    {/* <div>Nursery</div>
     
     {
       nurs.map((it)=>(
@@ -68,14 +114,12 @@ const [nurs,setnurs] = useState([])
             )):'-'
            
         }
-       
-
-        
-       
-
         </>
       ))
-    }
+    } */}
    </>
   )
 }
+
+// ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
+// ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));

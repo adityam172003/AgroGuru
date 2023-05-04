@@ -129,22 +129,22 @@ const NurseryForm = () => {
                <form action="" id="nur_form"onSubmit={handleSubmit(onSubmit)}>
                    <div>
                        <label for="nur_name">Name of Nursery</label><br/>
-                       <input type="text" id="nur_name"{...register("name")}/>
+                       <input type="text" id="nur_form_name"{...register("name")}/>
                        <p>{errors.name?.message}</p>
                    </div>
                    <div>
                        <label for="nur_addr">Address of Nursey</label><br/>
-                       <input type="text" id="nur_addr"{...register('address')}/>
+                       <input type="text" id="nur_form_addr"{...register('address')}/>
                        <p>{errors.address?.message}</p>
                    </div>
                    <div>
                        <label for="nur_email">Contact Email</label><br/>
-                       <input type="email" id="nur_email"{...register("email")}/>
+                       <input type="email" id="nur_form_email"{...register("email")}/>
                        <p>{errors.email?.message}</p>
                    </div>
                    <div>
                        <label for="nur_phone">Contact Number</label><br/>
-                       <input type="text" id="nur_phone"{...register("phone")}/>
+                       <input type="text" id="nur_form_phone"{...register("phone")}/>
                        <p>{errors.phone?.message}</p>
                    </div>
                    <div id="nur_times">
