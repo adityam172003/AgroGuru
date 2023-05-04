@@ -101,3 +101,15 @@
     margin: 0;
     font-size: .8rem;
 }
+
+/* new form  */
+#main_sec{
+    width: 50%;
+    height: 10rem;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem 25rem;
+}

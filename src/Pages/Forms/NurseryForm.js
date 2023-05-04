@@ -175,7 +175,19 @@ const NurseryForm = () => {
                             </div>
            </div>
     </section>
+    <section id="main_sec">
+        <div>
+            <label for="nur_form_item_name">Item Name</label>
+            <input type="text" id="nur_form_item_name"/>
+        </div>
+        <div>
+            <label for="nur_form_item_img">Item Images</label>
+            <input type="file" id="nur_form_item_img"/>
+        </div>
+        <div></div>
+    </section>
 </section>
+
   )
 }
 
