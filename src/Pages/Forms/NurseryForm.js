@@ -184,7 +184,7 @@ const NurseryForm = () => {
             <label for="nur_form_item_img">Item Images</label>
             <input type="file" id="nur_form_item_img"/>
         </div>
-        <div></div>
+        <div><button id="nur_form_item_sub">submit</button></div>
     </section>
 </section>
 
