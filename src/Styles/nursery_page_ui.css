@@ -134,3 +134,22 @@
 #nur_map:hover{
    background-color: #4c6543;
 }
+
+.itemname{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 1.4rem;
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    padding-top: 6rem;
+    color: transparent;
+    
+}
+ .itemname:hover{
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    color: white;
+}

@@ -74,12 +74,13 @@ const [nurs,setnurs] = useState([])
                    </div>
                </div>
                <div id="nur_cart_imgs">
-               <Carousel  showThumbs={false}  autoPlay={true}  >
+               <Carousel  showThumbs={false}  autoPlay={true}  infiniteLoop={true}>
                {
             (it.Items)?it.Items.map((i)=>(
               <>
               <div className='item_img'>
                     <img src={`http://localhost:8080/uploads/${i.photo}`} width={200} height={250}/>
+                    <span className='itemname'>{i.itemname}</span>
                 </div>
               </>
             )):'/'
