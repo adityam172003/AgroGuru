@@ -49,7 +49,7 @@
 
 .inner-carousel {
     display: flex;
-    animation: scroll 50s linear infinite;
+    animation: scroll 40s linear infinite;
 }
 
 .carousel {
@@ -64,6 +64,6 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-70%);
+      transform: translateX(-210%);
     }
   }

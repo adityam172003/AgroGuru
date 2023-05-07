@@ -53,7 +53,11 @@
     padding-left: 5rem;
     backdrop-filter: blur(25px);
 }
-
+#nur_news_cl{
+    margin: 1rem;
+    padding: 0 1rem;
+    height: 22rem;
+}
 #nur_form_cnt h2{
      padding: 2rem;
      color: #385b04;

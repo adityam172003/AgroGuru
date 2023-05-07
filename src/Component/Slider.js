@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+// import React, { useEffect, useRef, useState } from 'react'
 import {motion} from 'framer-motion'
-import images from "../images"
+// import images from "../NurseryImages"
 import '../Styles/Slider.css'
 
-const Slider = () => {
+const Slider = ({img}) => {
 
     // const [width, setWidth] = useState(0);
     // const carousel = useRef();
@@ -11,6 +11,7 @@ const Slider = () => {
     // useEffect(() => {
     //     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     // }, [])
+
 
   return (
     <div className='slider'>
@@ -20,11 +21,11 @@ const Slider = () => {
         >
             <motion.div 
                 drag='x' 
-                dragConstraints={{right:0,left:-1400}} 
+                dragConstraints={{right:0,left:0}} 
                 className='inner-carousel'
             >
                 {
-                    images.map((image) => {
+                    img.map((image) => {
                         return(
                             <motion.div 
                                 className='item'
