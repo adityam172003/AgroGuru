@@ -6,7 +6,6 @@ import Slider from '../../Component/Slider'
 export const About = () => {
   return (
     <div>
-      <Slider />
       <Features title='Crop-Prediction' url={image1} body='crop-prediction' nav='/main/crop'/>
     </div>
   )
