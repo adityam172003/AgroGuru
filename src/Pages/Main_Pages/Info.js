@@ -1,8 +1,11 @@
 import React from 'react'
+import BasicModal from '../../Component/Modal'
 
 const Info = () => {
   return (
-    <div>Info</div>
+    <div>
+      <BasicModal />
+    </div>
   )
 }
 

@@ -5,6 +5,10 @@ import ReactDOM from 'react-dom';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import NurseryImages from '../../NurseryImages';
+import Slider from '../../Component/Slider';
+
+
 <link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
 export const Nursery = () => {
 const [nurs,setnurs] = useState([])
@@ -52,7 +56,9 @@ const [nurs,setnurs] = useState([])
    <>
    <section id="nur_page">
        
-       <div id="nur_news_cl"></div>
+       <div id="nur_news_cl">
+        <Slider img={NurseryImages}/>
+       </div>
   
        <section id="nur_gallery">
            <div id="nur_title">Plant Nurseries in Pune</div>

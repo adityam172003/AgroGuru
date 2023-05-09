@@ -5,7 +5,7 @@ import * as yup from 'yup'
 import '../../Styles/nursery_form_ui.css'
 import axios from 'axios'
 var bodyFormData = new FormData();
-
+var itemFormData = new FormData();
 
 
 const NurseryForm = () => {
@@ -29,6 +29,40 @@ const NurseryForm = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema)
     });
+
+    const [imageForm, setImageForm] = useState({});
+
+    const imageSubmitHandle = async (e) => {
+        e.preventDefault();
+        console.log()
+        console.log()
+        // const itemName = e.target.value.itemName;
+        // const itemImage = e.target.value.itemImage;
+        // setImageForm({itemName, itemImage});
+
+        itemFormData.append("itemname",e.target.itemName.value);
+        itemFormData.append("photo",e.target.itemImage.files[0]);
+       const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "multipart/form-data",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+        await axios.post('/nursery/itemadd',itemFormData,axiosConfig)
+        .then((it)=>{
+            console.log("item added");
+
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+
+        e.target.reset();
+    }
 
     const onSubmit =async (data) => {
      
@@ -100,6 +134,7 @@ const NurseryForm = () => {
 
     
     }
+    
     
 
 
@@ -175,16 +210,18 @@ const NurseryForm = () => {
                             </div>
            </div>
     </section>
-    <section id="main_sec">
-        <div>
-            <label for="nur_form_item_name">Item Name</label>
-            <input type="text" id="nur_form_item_name"/>
-        </div>
-        <div>
-            <label for="nur_form_item_img">Item Images</label>
-            <input type="file" id="nur_form_item_img"/>
-        </div>
-        <div><button id="nur_form_item_sub">submit</button></div>
+    <section id="main_sec" onSubmit={imageSubmitHandle}>
+        <form >
+            <div>
+                <label for="nur_form_item_name">Item Name</label>
+                <input type="text" id="nur_form_item_name" name='itemName'/>
+            </div>
+            <div>
+                <label for="nur_form_item_img">Item Images</label>
+                <input type="file" id="nur_form_item_img" name='itemImage'/>
+            </div>
+            <div><button id="nur_form_item_sub" type='submit'>submit</button></div>
+        </form>
     </section>
 </section>
 

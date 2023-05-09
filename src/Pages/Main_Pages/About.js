@@ -2,6 +2,7 @@ import React from 'react'
 import Features from '../../Component/Features'
 import image1 from '../../images/2.jpg'
 import { MainNavbar } from '../../Component/MainNavbar'
+import Slider from '../../Component/Slider'
 
 export const About = () => {
   return (
