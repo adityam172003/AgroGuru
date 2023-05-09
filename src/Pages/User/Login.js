@@ -58,7 +58,7 @@ const Login = () => {
 
        if(status==200)
        {
-        nevigate('/main/about');
+        nevigate('/main');
        }
        else
        {

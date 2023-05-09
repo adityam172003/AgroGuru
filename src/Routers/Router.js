@@ -24,6 +24,7 @@ import { Laboratory } from "../Pages/Main_Pages/Laboratory";
 import { Forms }      from "../Layout/Forms";
 
 import Info from "../Pages/Main_Pages/Info";
+import Services from "../Layout/Services";
 
 // creating react-routers 
 const router = createBrowserRouter(
@@ -35,22 +36,26 @@ const router = createBrowserRouter(
         
         
         <Route path='/main'    element={<Main/>}>
-          <Route path="about"  element={<About/>}></Route>
-          <Route path='crop'   element={<CropPredict/>} ></Route>
+          
+          </Route>
+          <Route path="/about"  element={<About/>}></Route>
+          <Route path="/profile" element={<Profile/>}>
+         
+         <Route path="form"      element={<Forms/>}>
+           <Route path="nurf"    element={<NurseryForm/>}></Route>
+           <Route path="marketf" element={<MarketForm/>}/>
+           <Route path="labf"    element={<LaboratoryForm/>}/>
+         </Route>
+         
+         </Route>  
+
+        <Route path="/services" element={<Services/>}>
+        <Route path='crop'   element={<CropPredict/>} ></Route>
           <Route path='nur'    element={<Nursery/>} ></Route>
           <Route path="market" element={<Market/>}/>
           <Route path="lab"   element={<Laboratory/>}/>
-          <Route path="profile" element={<Profile/>}></Route>
           <Route path="info"   element={<Info />}/>
-
-          <Route path="form"      element={<Forms/>}>
-            <Route path="nurf"    element={<NurseryForm/>}></Route>
-            <Route path="marketf" element={<MarketForm/>}/>
-            <Route path="labf"    element={<LaboratoryForm/>}/>
         </Route>
-            <Route path="labf" element={<LaboratoryForm/>}/>
-          </Route>
-
       </Route>
 
     
