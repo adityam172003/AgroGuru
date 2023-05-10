@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#laboratory_page{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/assets/lab1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#lab_back{
+    background: transparent;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+
+}
+#lab_form_cnt{
+    margin-top: 3rem;
+    width: 40%;
+    height: fit-content;
+    box-shadow: 0 0 100px 10px;
+    border-radius: 50px;
+    font-family: 'poppins',sans-serif;
+    background-image: url('../../public/assets/lab1.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+
+}
+#lab_form_back{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 50px;
+ 
+
+}
+#lab_form{
+    width: 100%;
+    display: grid;
+    justify-items: baseline;
+    align-items: center;
+    padding-left: 5rem;
+    backdrop-filter: blur(25px);
+}
+#lab_news_cl{
+    margin: 1rem;
+    padding: 0 1rem;
+    height: 22rem;
+}
+#lab_form_cnt h2{
+     padding: 2rem;
+     color: #385b04;
+}
+#lab_form_cnt input,#lab_form_cnt button{
+    width: 27rem;
+    margin-bottom: .5rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+#lab_times{
+    display: flex;
+    gap: 0rem;
+}
+#lab_times input{
+    width: 6rem;
+}
+#lab_form_cnt label{
+    padding-left: .5rem;
+    font-weight: 500;
+    color: #c6f090;
+}
+#lab_form_cnt input{
+    padding-left: 1rem;
+    background-color: #92a871;
+    box-shadow: 0 0 8px -2px black;
+    color: #26370f;
+    font-weight: 600;
+    color: #26370f;
+    font-size: 1rem 
+
+}
+#lab_form_cnt button{
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    background-color:#92a871;
+    box-shadow: 0 0 10px -2px black;
+
+}
+#lab_form_cnt p{
+    padding-top: 0;
+    padding-left: 1rem;
+    margin: 0;
+    font-size: .8rem;
+}
+
+/* new form  */
+#main_sec{
+    width: 50%;
+    height: 10rem;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem 25rem;
+}
