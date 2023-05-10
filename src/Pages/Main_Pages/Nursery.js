@@ -65,7 +65,7 @@ const [nurs,setnurs] = useState([])
            {
             nurs.map((it)=>(<div id="nur_cart">
                <div id="nur_img_n_cnt">
-                   <div id="img_dv"><img src={`http://localhost:8080/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
+                   <div id="img_dv"><img src={`https://agroguru.onrender.com/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
                    <div>
                        <p id="nur_name">{it.name}</p>
                        <p id="nur_addr">{it.address}</p>
@@ -85,7 +85,7 @@ const [nurs,setnurs] = useState([])
             (it.Items)?it.Items.map((i)=>(
               <>
               <div className='item_img'>
-                    <img src={`http://localhost:8080/uploads/${i.photo}`} width={200} height={250}/>
+                    <img src={`https://agroguru.onrender.com/uploads/${i.photo}`} width={200} height={250}/>
                     <span className='itemname'>{i.itemname}</span>
                 </div>
               </>

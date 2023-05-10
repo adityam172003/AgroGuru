@@ -11,7 +11,8 @@
     display: block;
     padding: 0rem 0rem 3rem 2rem;
     font-family: 'poppins',sans-serif;
-
+    margin-top: 6rem;
+    overflow: hidden;
 
 }
 #nur_gallery{
@@ -45,6 +46,7 @@
     align-items: center;
     /* padding: .5rem .2rem; */
     border-radius: 20px;
+    /* overflow: hidden; */
 }
 #nur_img_n_cnt{
     display: flex;
@@ -59,7 +61,6 @@
     gap: 1rem;
 }
 #nur_news_cl{
-    padding: 0rem 0rem 3rem 2rem;
     width: 98%;
     height: 20rem;
     background-color: aliceblue;

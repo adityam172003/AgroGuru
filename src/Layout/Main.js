@@ -3,8 +3,11 @@ import { Outlet } from 'react-router-dom'
 import { MainNavbar } from '../Component/MainNavbar'
 import { useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
+import "../Styles/Home_page_ui.css"
 
 import axios from 'axios';
+import MainCarousel from '../Component/MainCarousel';
+import MainInfo from '../Component/MainInfo';
 function Main() {
  
 
@@ -33,8 +36,10 @@ function Main() {
   return (
    <>
      
-     <MainNavbar/>
-     <Outlet/>
+    <MainNavbar/>
+    <Outlet/>
+    <MainCarousel />
+    <MainInfo /> 
    </>
   )
 

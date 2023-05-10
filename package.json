@@ -2,7 +2,7 @@
   "name": "agro",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "https://agroguru.onrender.com",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -14,6 +14,7 @@
     "axios": "^1.3.6",
     "FormData": "^0.10.1",
     "framer-motion": "^10.12.8",
+    "material": "^0.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
