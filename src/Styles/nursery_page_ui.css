@@ -19,7 +19,7 @@
    width: 98%;
    height: fit-content;
    padding: 1.5rem;
-   background-color: #7fa88d;
+   background-color: #79bd65;
    display: grid;
    grid-template-columns: 1fr;
    row-gap: 1.5rem;
@@ -61,20 +61,26 @@
     gap: 1rem;
 }
 #nur_news_cl{
+    position: relative;
     width: 98%;
     height: 20rem;
-    background-color: aliceblue;
-
-
+    background-color: rgb(255, 255, 255);
+    right: 1rem;
+   
 }
+
 #nur_title{
     font-weight: 700;
     font-size: 2.3rem;
     width: 98%;
     height: 1rem;
+    margin-top: 1rem;
    margin-bottom: 1rem;
-   padding-left: 1rem;
    color: white ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
 }
 #nur_name{
    font-size: 2rem;
@@ -105,6 +111,7 @@
     border-radius: 15px;
     outline: none;
     box-shadow: 0 0 5px -1px black; 
+    padding-right: 1rem;
 }
 #optime{
     color: green;

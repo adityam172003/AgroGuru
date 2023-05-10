@@ -22,7 +22,7 @@ const MainInfo = () => {
                     <img src="/assets/ft1_img.jpg" alt="" width="380rem" />
                 </div>
               </div>
-              s<div class="fts ft2">
+              <div class="fts ft2">
                 <div class="fts_imgs" id="fts_img2">
                     <div id="e1"></div>
                     <div id="e2"></div>
