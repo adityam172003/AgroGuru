@@ -24,7 +24,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0rem 2rem 0rem 1rem;
-    z-index: 1;
+    z-index: 10;
+    box-shadow: 0 0 10px -3px;
 }
 
 #web_logo_div {

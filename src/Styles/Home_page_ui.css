@@ -174,15 +174,15 @@
     height:100%;
     /* background-color: #D00BBD; */
 }
-.ft1{
+.ft2{
     background-color: #f6f6f6;
 }
-.ft3{
+.ft4{
     background-color: #f6f6f6;
 }
-.ft5{
+/* .ft5{
     background-color: #f6f6f6;
-}
+} */
 #fts_img1 img{
     position: relative;
     top: -380px;

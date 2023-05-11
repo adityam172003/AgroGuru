@@ -8,6 +8,7 @@ import { MainNavbar } from '../Component/MainNavbar'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import FooterWeb from '../Component/FooterWeb'
 
 export const Services = () => {
 
@@ -39,6 +40,7 @@ export const Services = () => {
     <>
         <MainNavbar/>
         <Outlet/>
+        <FooterWeb />
     </>
   )
 }

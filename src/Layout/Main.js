@@ -5,9 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import "../Styles/Home_page_ui.css"
 
+
 import axios from 'axios';
 import MainCarousel from '../Component/MainCarousel';
 import MainInfo from '../Component/MainInfo';
+import FooterWeb from '../Component/FooterWeb';
+
+
 function Main() {
  
 
@@ -40,6 +44,7 @@ function Main() {
     <Outlet/>
     <MainCarousel />
     <MainInfo /> 
+    <FooterWeb />
    </>
   )
 
