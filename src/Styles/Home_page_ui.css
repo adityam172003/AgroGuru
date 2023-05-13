@@ -25,6 +25,7 @@
     border-radius: 30px;
     overflow: hidden;
     animation: photo_change 20s  4s ease-in-out  infinite;
+    box-shadow: 0 0 15px -3px;
 }
 @keyframes photo_change {
     0%{
@@ -426,4 +427,7 @@
 }
 .ft5 #fts_cnt5 h3{
     color:  #33DAFF;
+}
+.ft5{
+    margin-bottom: 10rem;
 }

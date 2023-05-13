@@ -13,11 +13,12 @@
     font-family: 'poppins',sans-serif;
     margin-top: 6rem;
     overflow: hidden;
+    margin-bottom: 15rem;
 
 }
 #nur_gallery{
    width: 98%;
-   height: fit-content;
+   /* height: fit-content; */
    padding: 1.5rem;
    background-color: #79bd65;
    display: grid;

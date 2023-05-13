@@ -1,0 +1,281 @@
+#abt_us{
+    margin-top: 4rem;
+    width: 100%;
+    height: fit-content;
+    /* background-color: antiquewhite; */
+    font-family: 'poppins',sans-serif;
+}
+#abt_img{
+    width: 100%;
+    height: 25rem;
+    background-image: url('../../public/assets/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#abt_img_cover{
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+#abt_logo{
+    position: relative;
+    font-weight: 700;
+    font-size: 5rem;
+    background-image: url('../../public/assets/leaf.svg');
+    background-repeat: no-repeat;
+    background-position:0%;
+    background-size: 5rem;
+    padding-left: 5rem;
+    margin-top: 3rem;
+}
+#abt_logo #sp_1{
+    color: #00680A;
+}
+#abt_logo #sp_2{
+    color: #DBFF00;
+}
+#abt_logo_info{
+    width: 70%;
+    font-weight: 550;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+}
+.pcnt{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.1rem;
+}
+#abt_desc{
+    padding: 4rem 5rem 6rem 5rem;
+    margin-bottom: 3rem;
+    background-color: #efefef;
+  
+}
+
+#our_msn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem 4rem 5rem;
+    background-color: rgb(255, 255, 255);
+}
+#our_msn h2{
+    font-size: 2.2rem;
+
+}
+#our_msn p{
+
+    padding: 2rem 3rem 2rem 3rem;
+}
+#our_tm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    background-color: #efefef;
+}
+
+#our_tm h2{
+    font-size: 2.2rem;
+}
+#our_tm #team_desc{
+  width: 50%;
+  padding-top: 2rem;
+}
+#our_tm #team{
+    width: 100%;
+    height: 38rem;
+    /* background-color:antiquewhite; */
+    gap: 3rem;
+}
+
+.mem_img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 500px;
+    /* background-image: url('../../public/assets/ochir-erdene-oyunmedeg-LmyPLbbUWhA-unsplash.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 30%;
+    z-index: 1;
+    opacity: .7;
+    background-color: #A6A6A6;
+}
+#m4{
+    background-image: url('../../public/assets/Rahul_img.png');
+}
+.mem_d{
+    width: 25rem;
+    height: 12rem;
+    border-radius: 10px;
+    box-shadow: 0 0 40px -20px;
+    transition: ease-in-out .05s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    row-gap: 0;
+    
+}
+
+.mem_name{
+    width: 100%;
+    font-weight: 600;
+     display: flex; 
+     justify-content: center; 
+     padding-top: 2rem;
+     font-size: 1.1rem;
+}
+.mem_work{
+    color: #A6A6A6;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    padding-top: .5rem;
+    letter-spacing: 1px;
+}
+.social_med{
+    width: 100%;
+    padding-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+.sc_med_ic{
+    width: 100%;
+    height: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+}
+.sc_med_ic li{
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+}
+.sc_med_ic li a{
+    width: 100%;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: 1.3rem 1.3rem;
+    transition: all .05s;
+    opacity: .7;
+}
+.sc_med_ic li a:hover{
+    transform: translateY(-7px);
+}
+.li_link{
+
+    background-image: url('../../public/assets/linkedin.png');
+}
+.in_link{
+    background-image: url('../../public/assets/instagram.png');
+}
+.fb_link{
+    background-image: url('../../public/assets/facebook.png');
+}
+#d1{
+    position: absolute;
+    top: 1130px;
+    left: 48px;
+    visibility: hidden;
+}
+
+#d2{
+    position: absolute;
+
+    top: 1130px;
+    left: 390px;
+    visibility: hidden;
+}
+#d3{
+    position: absolute;
+
+    top: 1130px;
+    left: 728px;
+    visibility: hidden;
+}
+#d4{
+    position: absolute;
+
+    top: 1130px;
+    left: 1068px;
+    visibility: hidden;
+}
+#m1{
+    position: absolute;
+    top: 1280px;
+    left: 152px;
+}
+
+#m2{
+    position: absolute;
+    top: 1280px;
+    left: 493px;
+}
+#m3{
+    position: absolute;
+    top: 1280px;
+    left: 832px;
+}
+#m4{
+    position: absolute;
+    top: 1280px;
+    /* right: 150px; */
+    left: 1174px;
+    /* left: 1150px; */
+}
+#m1:hover{
+    opacity: 1;
+}
+#m2:hover{
+    opacity: 1;
+}
+#m3:hover{
+    opacity: 1;
+}
+#m4:hover{
+    opacity: 1;
+}
+#m1:hover ~#d1{
+    visibility: visible;
+    background-color: white;
+}
+#m2:hover ~#d2{
+    visibility: visible;
+    background-color: white;
+}
+#m3:hover ~#d3{
+    visibility: visible;
+    background-color: white;
+}
+#m4:hover ~#d4{
+    visibility: visible;
+    background-color: white;
+}
+#d1:hover{
+    z-index: 1;
+    visibility: visible;
+    background-color: white;
+}
+#d2:hover{
+    z-index: 1;
+    visibility: visible;
+    background-color: white;
+}
+#d3:hover{
+    z-index: 1;
+    visibility: visible;
+    background-color: white;
+}
+ #d4:hover{
+    z-index: 1;
+    visibility: visible;
+    background-color: white;
+} 
