@@ -1,13 +1,20 @@
 .weather {
     position: relative;
-    display: flex;
     height: 100vh;
     width: 100%;
     background-image: url('../../public/assets/weather_bg.jpg');
     padding: 4rem;
     margin: 0;
     margin-bottom: 10rem;
-    /* z-index: -2; */
+    z-index: -2;
+}
+
+.weather-lottie {
+    display: flex;
+    position:absolute;
+    margin-top: 15rem;
+    left: 40rem;
+    z-index: 0;
 }
 
 .top{
@@ -56,8 +63,3 @@
     color: #5F264A;
 }
 
-.weather-lottie {
-    display: flex;
-    position:absolute;
-    /* z-index: 1; */
-}
