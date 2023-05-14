@@ -33,7 +33,7 @@ export const About = () => {
             </p>
         </div>
         <div id="our_tm">
-            <h2>Our Team</h2>
+            <h2>Our dedicated Team</h2>
             <p id="team_desc" class="pcnt">Meet the agroguru web development team,the driving force behind our user-friendly platform
                 for farmers.</p>
             <div id="team">
