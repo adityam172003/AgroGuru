@@ -8,7 +8,7 @@ function Weather() {
   // const [lat, setLat] = useState('');
   // const [long, setLong] = useState('');
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${18.5204}&lon=${73.8567}&appid=${`839fdcea2a3f4c91ec2a32a9bb34f461`}`
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${18.5204}&lon=${73.8567}&units=metric&appid=${`839fdcea2a3f4c91ec2a32a9bb34f461`}`
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -16,7 +16,7 @@ function Weather() {
       console.log(response.data)
     })
   }, [])
-
+  console.log(data);
   return (
     <div className="weather">
 
@@ -26,7 +26,7 @@ function Weather() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()} F</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed()} &deg;</h1> : null}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -46,6 +46,10 @@ function Weather() {
           <div className="wind">
             {data.wind ? <p className="bold">{data.wind.speed.toFixed()} MPH</p> : null}
             <p>Wind Speed</p>
+          </div>
+          <div className="wind">
+            {data.wind ? <p className="bold">{data.main.pressure.toFixed()} hPa</p> : null}
+            <p>Pressure</p>
           </div>
         </div>
 
