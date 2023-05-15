@@ -1,21 +1,26 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import '../Styles/HomeNavbar.css'
+import { MainContext } from "../context/agroguru_context";
+import Spinner from '../Component/Spinner.js'
+
 
 export const MainNavbar = () => {
+
+  const { spin,setSpin } = useContext(MainContext);
+
 
   const nevigate = useNavigate();
 
   const userLogout = async () => {
-
+    setSpin(true);
     axios.get('/user/logout')
       .then(() => {
+        setSpin(false);
         nevigate('/');
         alert("Logout");
-
-
       })
       .catch((err) => {
         console.log(err);
@@ -35,6 +40,7 @@ export const MainNavbar = () => {
     //         <button onClick={userLogout} >logout</button>
     //   </div>
     // </div>
+    <>
     <section id="navbar_sec">
       <div id="web_logo_div"><span id="sp1">Agro</span><span id="sp2">Guru</span></div>
       <div id="navbar_menu">
@@ -81,6 +87,7 @@ export const MainNavbar = () => {
         </div>
       </div>
     </section>
-
+    {spin && <Spinner />}
+    </>
   )
 }

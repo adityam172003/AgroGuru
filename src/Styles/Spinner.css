@@ -1,0 +1,25 @@
+.spin {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    opacity: 50%;
+}
+
+.spin-lottie{
+    position: absolute;
+    top: 10rem;
+    left: 35rem;
+    z-index: 2;
+}
+#spin_par{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    z-index: 2;
+}
+
