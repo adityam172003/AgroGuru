@@ -107,6 +107,9 @@
     opacity: .7;
     background-color: #A6A6A6;
 }
+#m1{
+    background-image: url('../../public/assets/Aditya_img.jpg');
+}
 #m4{
     background-image: url('../../public/assets/Rahul_img.png');
 }

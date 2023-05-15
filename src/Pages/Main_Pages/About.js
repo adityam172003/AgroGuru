@@ -43,7 +43,7 @@ export const About = () => {
                     <p class="mem_work">Backend Developer</p>
                     <p class="social_med">
                         <ul class="sc_med_ic">
-                            <li><a href="" class="li_link"></a></li>
+                            <li><a href="https://www.linkedin.com/in/aditya-mahajan-b5b8b7229/" class="li_link"></a></li>
                             <li><a href="" class="in_link"></a></li>
                             <li><a href="" class="fb_link"></a></li>
                         </ul>
