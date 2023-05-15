@@ -69,8 +69,8 @@ export const About = () => {
                     <p class="mem_work">Frontend UX Developer</p>
                     <p class="social_med">
                         <ul class="sc_med_ic">
-                            <li><a href="" class="li_link"></a></li>
-                            <li><a href="" class="in_link"></a></li>
+                            <li><a href="https://www.linkedin.com/in/sarthaknirgude7/" class="li_link"></a></li>
+                            <li><a href="https://www.instagram.com/_i_am_srn/" class="in_link"></a></li>
                             <li><a href="" class="fb_link"></a></li>
                         </ul>
                     </p>
