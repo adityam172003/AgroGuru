@@ -1,5 +1,5 @@
 import Lottie from '../Component/Lottie'
-import spin from '../static/spin-lottie.json'
+import spin from '../static/loader.json'
 import '../Styles/Spinner.css'
 
 const Spinner = () => {

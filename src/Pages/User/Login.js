@@ -52,7 +52,7 @@ const Login = () => {
     await axios
       .post("/user/login", { data, Locate }, axiosConfig)
       .then((dat) => {
-        alert("logged in");
+        // alert("logged in");
         setSpin(false);
       })
       .catch((err) => {

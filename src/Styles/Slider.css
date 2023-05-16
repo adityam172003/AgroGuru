@@ -64,6 +64,6 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-210%);
+      transform: translateX(-140%);
     }
   }

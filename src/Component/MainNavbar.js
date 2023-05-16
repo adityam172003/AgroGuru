@@ -20,7 +20,7 @@ export const MainNavbar = () => {
       .then(() => {
         setSpin(false);
         nevigate('/');
-        alert("Logout");
+        // alert("Logout");
       })
       .catch((err) => {
         console.log(err);
