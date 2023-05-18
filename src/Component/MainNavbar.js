@@ -87,7 +87,7 @@ export const MainNavbar = () => {
         </div>
       </div>
     </section>
-    {spin && <Spinner />}
+    {/* {spin && <Spinner />} */}
     </>
   )
 }
