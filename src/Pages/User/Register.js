@@ -66,7 +66,9 @@ const Register = () => {
     return (
        
         <section id="reg_page">
-            <div id="reg_page_wp"></div>
+            <div id="reg_page_wp"><div id="reg_cover">
+          <h2><span id="spn1">Agro</span ><span id="spn2" >Guru</span></h2>
+        </div></div>
             <div id="reg_page_dtl">
                 <div id="reg_cnt">
                     <p id="wel_msg">Welcome to AgroGuru!</p>

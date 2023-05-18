@@ -160,48 +160,44 @@ const MarketForm = () => {
     <section id="mar_back">
         <div id="mar_form_cnt">
            <div id="mar_form_back">
-               <h2>Register market</h2>
+               <h2>Register Market</h2>
                <form action="" id="mar_form"onSubmit={handleSubmit(onSubmit)}>
-                   <div>
-                       <label for="mar_name">Name of market</label><br/>
-                       <input type="text" id="mar_form_name"{...register("name")}/>
-                       <p>{errors.name?.message}</p>
+                   <div className='attri'>
+                       <input type="text" id="mar_form_name"{...register("name")} placeholder='Name of market'/>
+                       {/* <p>{errors.name?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="mar_addr">Address of Market</label><br/>
-                       <input type="text" id="mar_form_addr"{...register('address')}/>
-                       <p>{errors.address?.message}</p>
+                   <div className='attri'>
+                       <input type="text" id="mar_form_addr"{...register('address')} placeholder='Address of Market'/>
+                       {/* <p>{errors.address?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="mar_email">Contact Email</label><br/>
-                       <input type="email" id="mar_form_email"{...register("email")}/>
-                       <p>{errors.email?.message}</p>
+                   <div className='attri'>
+                       <input type="email" id="mar_form_email"{...register("email")} placeholder='Contact Email'/>
+                       {/* <p>{errors.email?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="mar_phone">Contact Number</label><br/>
-                       <input type="text" id="mar_form_phone"{...register("phone")}/>
-                       <p>{errors.phone?.message}</p>
+                   <div className='attri'>
+            
+                       <input type="text" id="mar_form_phone"{...register("phone")} placeholder='Contact Number'/>
+                       {/* <p>{errors.phone?.message}</p> */}
                    </div>
-                   <div id="mar_times">
+                    {/* <div id="mar_times" className='attri'>
                        <div>
-                           <label for="mar_in_time">Opening Time</label>
+                           <label id="mar_in_time">Opening Time</label>
                            <input type="time" id="mar_in_time"{...register("openTime")}/>
                            <p>{errors.openTime?.message}</p>
                        </div>
                        <div>
-                           <label for="mar_out_time">Closing Time</label>
-                           <input type="time" id="mar_out_time" {...register("closeTime")}/>
+                           <label id="mar_out_time">Closing Time</label>
+                           <input type="time"  {...register("closeTime")}/>
                            <p>{errors.closeTime?.message}</p>
                        </div>
+                   </div>  */}
+                   <div className='attri'>
+                       <input type="text" id="mar_off_day"{...register("offDay")} placeholder='Enter Off Day'/>
+                       {/* <p>{errors.offDay?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="mar_off_day">Enter Off Day</label><br/>
-                       <input type="text" id="mar_off_day"{...register("offDay")}/>
-                       <p>{errors.offDay?.message}</p>
-                   </div>
-                   <div>
+                   <div className='attri'>
                     
-                    <input type='file' onChange={(e)=>{
+                    <input type='file' id='mar_img_in' onChange={(e)=>{
                         setmarketImage(e.target.files[0]);
                     }} ></input>
                    </div>
@@ -210,7 +206,7 @@ const MarketForm = () => {
                             </div>
            </div>
     </section>
-    <section id="main_sec" onSubmit={imageSubmitHandle}>
+    {/* <section id="main_sec" onSubmit={imageSubmitHandle}>
         <form >
             <div>
                 <label for="mar_form_item_name">Item Name</label>
@@ -222,7 +218,7 @@ const MarketForm = () => {
             </div>
             <div><button id="mar_form_item_sub" type='submit'>submit</button></div>
         </form>
-    </section>
+    </section> */}
 </section>
 
   )

@@ -8,6 +8,7 @@ export const Forms = () => {
     <>
         <MainNavbar/>
         <Outlet/>
+        {/* <FooterWeb /> */}
     </>
   )
 }

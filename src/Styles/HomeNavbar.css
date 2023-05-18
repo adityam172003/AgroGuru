@@ -62,7 +62,7 @@
 #navbar_menu_list .nav_menu_item {
     height: 4.5rem;
     position: relative;
-    top: 1.5rem;
+    top: 2rem;
     justify-items: center;
     align-items: center;
     font-weight: 600;
@@ -76,10 +76,10 @@
     color: white;
 } */
 
-#navbar_menu_list .nav_menu_item .nav_it:hover {
+/* #navbar_menu_list .nav_menu_item:hover {
     cursor: pointer;
     color: #DBFF00;
-}
+} */
 
 #navbar_menu #nav_logout_btn {
     width: 5rem;
@@ -118,7 +118,7 @@
 #services_dropdown #services_list {
     list-style: none;
     padding-left: 0;
-    
+
 }
 
 .services_list_item {
@@ -160,6 +160,10 @@
 }
 #navbar_sec a{
     color: white;
+    text-decoration: none;
+}
+#navbar_sec a:hover{
+    color: #ddff00;
     text-decoration: none;
 }
 #navbar_sec .nav_menu_item .services_list_item a.active{

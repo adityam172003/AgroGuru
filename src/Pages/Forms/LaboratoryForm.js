@@ -162,27 +162,26 @@ const LaboratoryForm = () => {
            <div id="lab_form_back">
                <h2>Register Laboratory</h2>
                <form action="" id="lab_form"onSubmit={handleSubmit(onSubmit)}>
-                   <div>
-                       <label for="lab_name">Name of Laboratory</label><br/>
-                       <input type="text" id="lab_form_name"{...register("name")}/>
-                       <p>{errors.name?.message}</p>
+                   <div className='attri'>
+                       <input type="text" id="lab_form_name"{...register("name")} placeholder='Name of Laboratory'/>
+                       {/* <p>{errors.name?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="lab_addr">Address of Nursey</label><br/>
-                       <input type="text" id="lab_form_addr"{...register('address')}/>
-                       <p>{errors.address?.message}</p>
+                   <div className='attri'>
+
+                       <input type="text" id="lab_form_addr"{...register('address')} placeholder='Address of Nursey'/>
+                       {/* <p>{errors.address?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="lab_email">Contact Email</label><br/>
-                       <input type="email" id="lab_form_email"{...register("email")}/>
-                       <p>{errors.email?.message}</p>
+                   <div className='attri'>
+
+                       <input type="email" id="lab_form_email"{...register("email")} placeholder='Contact Email'/>
+                       {/* <p>{errors.email?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="lab_phone">Contact Number</label><br/>
-                       <input type="text" id="lab_form_phone"{...register("phone")}/>
-                       <p>{errors.phone?.message}</p>
+                   <div className='attri'>
+
+                       <input type="text" id="lab_form_phone"{...register("phone")} placeholder='Contact Number'/>
+                       {/* <p>{errors.phone?.message}</p> */}
                    </div>
-                   <div id="lab_times">
+                   {/* <div id="lab_times" className='attri'>
                        <div>
                            <label for="lab_in_time">Opening Time</label>
                            <input type="time" id="lab_in_time"{...register("openTime")}/>
@@ -193,15 +192,14 @@ const LaboratoryForm = () => {
                            <input type="time" id="lab_out_time" {...register("closeTime")}/>
                            <p>{errors.closeTime?.message}</p>
                        </div>
+                   </div> */}
+                   <div className='attri'>
+                       <input type="text" id="lab_off_day"{...register("offDay")} placeholder='Enter Off Day'/>
+                       {/* <p>{errors.offDay?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="lab_off_day">Enter Off Day</label><br/>
-                       <input type="text" id="lab_off_day"{...register("offDay")}/>
-                       <p>{errors.offDay?.message}</p>
-                   </div>
-                   <div>
+                   <div className='attri'>
                     
-                    <input type='file' onChange={(e)=>{
+                    <input type='file' id="lab_img_in" onChange={(e)=>{
                         setlaboratoryImage(e.target.files[0]);
                     }} ></input>
                    </div>
@@ -210,7 +208,7 @@ const LaboratoryForm = () => {
                             </div>
            </div>
     </section>
-    <section id="main_sec" onSubmit={imageSubmitHandle}>
+    {/* <section id="main_sec" onSubmit={imageSubmitHandle}>
         <form >
             <div>
                 <label for="lab_form_item_name">Item Name</label>
@@ -222,7 +220,7 @@ const LaboratoryForm = () => {
             </div>
             <div><button id="lab_form_item_sub" type='submit'>submit</button></div>
         </form>
-    </section>
+    </section> */}
 </section>
 
   )

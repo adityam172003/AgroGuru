@@ -49,15 +49,15 @@ const Login = () => {
       console.log("Longitude is :", position.coords.longitude);
     });
 
-    await axios
-      .post("/user/login", { data, Locate }, axiosConfig)
-      .then((dat) => {
-        // alert("logged in");
-        setSpin(false);
-      })
-      .catch((err) => {
-        status = err.response.status;
-      });
+    // await axios
+    //   .post("/user/login", { data, Locate }, axiosConfig)
+    //   .then((dat) => {
+    //     // alert("logged in");
+    //     setSpin(false);
+    //   })
+    //   .catch((err) => {
+    //     status = err.response.status;
+    //   });
 
     if (status == 200) {
       nevigate("/main");
@@ -70,7 +70,9 @@ const Login = () => {
   return (
     <>
         <section id="login_page">
-        <div id="login_page_wp"></div>
+        <div id="login_page_wp"><div id="lgn_cover">
+          <h2><span id="spn1">Agro</span ><span id="spn2" >Guru</span></h2>
+        </div></div>
         <div id="login_page_dtl">
           <div id="login_cnt">
             <p id="wel_msg">Welcome Back!</p>
@@ -102,7 +104,7 @@ const Login = () => {
           </div>
         </div>
       </section>
-      {spin && <Spinner />}
+      {/* {spin && <Spinner />} */}
 
     </>
   );

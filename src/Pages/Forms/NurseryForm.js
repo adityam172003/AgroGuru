@@ -162,55 +162,54 @@ const NurseryForm = () => {
            <div id="nur_form_back">
                <h2>Register Nursery</h2>
                <form action="" id="nur_form"onSubmit={handleSubmit(onSubmit)}>
-                   <div>
-                       <label for="nur_name">Name of Nursery</label><br/>
-                       <input type="text" id="nur_form_name"{...register("name")}/>
-                       <p>{errors.name?.message}</p>
+                   <div className='attri'>
+                      
+                       <input type="text" id="nur_form_name"{...register("name")} placeholder='Name of Nursery'/>
+                       {/* <p className='err'>{errors.name?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="nur_addr">Address of Nursey</label><br/>
-                       <input type="text" id="nur_form_addr"{...register('address')}/>
-                       <p>{errors.address?.message}</p>
+                   <div className='attri'>
+                       {/* <label for="nur_addr">Address of Nursey</label><br/> */}
+                       <input type="text" id="nur_form_addr"{...register('address')} placeholder='Address of Nursery'/>
+                       {/* <p className='err'>{errors.address?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="nur_email">Contact Email</label><br/>
-                       <input type="email" id="nur_form_email"{...register("email")}/>
-                       <p>{errors.email?.message}</p>
+                   <div className='attri'>
+                       {/* <label for="nur_email">Contact Email</label><br/> */}
+                       <input type="email" id="nur_form_email"{...register("email")} placeholder='Email'/>
+                       {/* <p className='err'>{errors.email?.message}</p> */}
                    </div>
-                   <div>
-                       <label for="nur_phone">Contact Number</label><br/>
-                       <input type="text" id="nur_form_phone"{...register("phone")}/>
-                       <p>{errors.phone?.message}</p>
+                   <div className='attri'>
+                       {/* <label for="nur_phone">Contact Number</label><br/> */}
+                       <input type="text" id="nur_form_phone"{...register("phone")} placeholder='Contact Number'/>
+                       {/* <p className='err'>{errors.phone?.message}</p> */}
                    </div>
-                   <div id="nur_times">
+                   <div id="nur_times" className='attri'>
                        <div>
-                           <label for="nur_in_time">Opening Time</label>
-                           <input type="time" id="nur_in_time"{...register("openTime")}/>
-                           <p>{errors.openTime?.message}</p>
+                           <label  id="nur_in_time">Opening Time</label>
+                           <input type="time" {...register("openTime")} />
+                           {/* <p className='err'>{errors.openTime?.message}</p> */}
                        </div>
                        <div>
-                           <label for="nur_out_time">Closing Time</label>
-                           <input type="time" id="nur_out_time" {...register("closeTime")}/>
-                           <p>{errors.closeTime?.message}</p>
+                           <label id="nur_out_time">Closing Time</label>
+                           <input type="time"  {...register("closeTime")}/>
+                           {/* <p className='err'>{errors.closeTime?.message}</p> */}
                        </div>
                    </div>
-                   <div>
-                       <label for="nur_off_day">Enter Off Day</label><br/>
-                       <input type="text" id="nur_off_day"{...register("offDay")}/>
-                       <p>{errors.offDay?.message}</p>
+                   <div className='attri'>
+                       {/* <label for="nur_off_day">Enter Off Day</label><br/> */}
+                       <input type="text" id="nur_off_day"{...register("offDay")} placeholder='Enter Off Day'/>
+                       {/* <p className='err'>{errors.offDay?.message}</p> */}
                    </div>
-                   <div>
-                    
-                    <input type='file' onChange={(e)=>{
+                   <div className='attri'>
+                    <input type='file' id='nur_img_in' onChange={(e)=>{
                         setnurseryImage(e.target.files[0]);
                     }} ></input>
                    </div>
-                   <div><button>Submit</button></div>
+                   <div id='lfbtn'><button>Submit</button></div>
                </form>
                             </div>
            </div>
     </section>
-    <section id="main_sec" onSubmit={imageSubmitHandle}>
+    {/* <section id="main_sec" onSubmit={imageSubmitHandle}>
         <form >
             <div>
                 <label for="nur_form_item_name">Item Name</label>
@@ -222,7 +221,7 @@ const NurseryForm = () => {
             </div>
             <div><button id="nur_form_item_sub" type='submit'>submit</button></div>
         </form>
-    </section>
+    </section> */}
 </section>
 
   )
