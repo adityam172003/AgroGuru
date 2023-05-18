@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#mar_page{
+    width: 100%;
+    height: 100rem;
+    background-color:white;
+    display: block;
+    padding: 0rem 0rem 3rem 2rem;
+    font-family: 'poppins',sans-serif;
+    margin-top: 6rem;
+    overflow: hidden;
+    margin-bottom: 15rem;
+
+}
+#mar_gallery{
+   width: 98%;
+   /* height: fit-content; */
+   padding: 1.5rem;
+   background-color: #62cc6c;
+   display: grid;
+   grid-template-columns: 1fr;
+   row-gap: 1.5rem;
+}
+#mar_cart{
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px -3px;
+}
+#mar_pg_phone{
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+#mar_cart_imgs{
+    width: 30%;
+    /* background-color: #76a887; */
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    /* padding: .5rem .2rem; */
+    border-radius: 20px;
+    /* overflow: hidden; */
+}
+#mar_img_n_cnt{
+    display: flex;
+    gap: 1.5rem;
+}
+#mar_img_n_cnt p{
+    width: 20rem;
+
+}
+#mar_tm{
+    display: flex;
+    gap: 1rem;
+}
+#mar_news_cl{
+    position: relative;
+    width: 98%;
+    height: 20rem;
+    background-color: rgb(255, 255, 255);
+    right: 1rem;
+   
+}
+
+#mar_title{
+    font-weight: 700;
+    font-size: 2.3rem;
+    width: 98%;
+    height: 1rem;
+    margin-top: 1rem;
+   margin-bottom: 1rem;
+   color: white ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+#mar_name{
+   font-size: 2rem;
+   font-weight: 600;
+   padding-bottom: 0;
+}
+#mar_cart_imgs .item_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#mar_addr{
+    padding-bottom: 1rem;
+}
+#mar_cart_imgs button{
+    width: 6%;
+}
+.but{
+    width: 10rem;
+    height: 2rem;
+    color: white;
+    background-color: #78a369;
+    border: none;
+    font-family: 'poppins',sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 0 0 5px -1px black; 
+    padding-right: 1rem;
+}
+#optime{
+    color: green;
+}
+#cltime{
+    color: red;
+}
+#mar_phone{
+    background-image: url('../../public/assets/phone_img.png');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 7%;
+    padding: .3rem 1rem 0rem 2.3rem;
+}
+#img_dv{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+#img_dv img{
+    transition: all .5s;
+}
+#img_dv img:hover{
+    transform: scale(1.1);
+}
+#mar_map:hover{
+   background-color: #4c6543;
+   
+}
+
+.itemname{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 1.4rem;
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    padding-top: 6rem;
+    color: transparent;
+    
+}
+ .itemname:hover{
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    color: white;
+}
