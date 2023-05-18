@@ -5,85 +5,64 @@ import NurseryImages from '../../NurseryImages';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+
 function CropPredict() {
-    
 
-  const url = ``;
-  
 
- 
+  const url = `Sarthak01.pythonanywhere.com`;
+
 
   return (
     <>
       <section id="crop_predict_pag">
-        <div id="nur_news_cl">
-          <Slider img={NurseryImages} />
+        <section>
+          <div className='crop-pred-bg'>
+            <div className='crop-pred-bg-layer'>
+              <div id='content-crp'>
+                <h2>Crop Predication</h2>
+                <p>Crosjfdslfjdslfjdslfsdsddjfklds</p>
+              </div>
+              <div className='content-crp-jif'></div>
+            </div>
+          </div>
+        </section>
+
+        <div id>
+          <h1 id='maintext'>Crop Predication<span>🌿</span></h1>
         </div>
-
-        <div className="container my-lg-3" id='maincontainer'>
-          <h1 className="text-success" id='maintext'>Crop Predication<span className="text-success">🌿</span></h1>
-
-
-          <form >
-            <div className="row">
-              <div className="col-md-4">
-                <label for="Nitrogen">Nitrogen</label>
-                <input type="number" step={0.01} id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen"
-                  className="form-control" />
-              </div>
-              <div className="col-md-4">
-                <label for="Phosporus">Phosporus</label>
-                <input type="number" step={0.01} id="Phosporus" name="Phosporus" placeholder="Enter Phosporus"
-                  className="form-control" />
-              </div>
-              <div className="col-md-4">
-                <label for="Potassium">Potassium</label>
-                <input type="number" step={0.01} id="Potassium" name="Potassium" placeholder="Enter Potassium"
-                  className="form-control" />
-              </div>
+        <section id='maincontainer'>
+          <di id='form-img-wrap'>
+            <div id="form-img">
             </div>
-            <div className="row">
-              <div className="col-md-4">
-                <label for="Temperature">Temperature</label>
-                <input type="number" step={0.01} id="Temperature" name="Temperature" placeholder="Enter Temperature"
-                  className="form-control" />
-              </div>
-              <div className="col-md-4">
-                <label for="Humidity">Humidity</label>
-                <input type="number" step={0.01} id="Humidity" name="Humidity" placeholder="Enter Humidity"
-                  className="form-control" />
-              </div>
-              <div className="col-md-4">
-                <label for="pH">pH</label>
-                <input type="number" step={0.01} id="pH" name="pH" placeholder="Enter pH" className="form-control" />
-              </div>
+          </di>
+          <div id="form-content">
+            <div id='form-crop-pred-title'>
+              <h2>Predict Crop</h2>
             </div>
-            <div className="row mt-4">
-              <div className="col-md-4">
-                <label for="Rainfall">Rainfall</label>
-                <input type="number" step={0.01} id="Rainfall" name="Rainfall" placeholder="Enter Rainfall in mm"
-                  className="form-control" />
+            <form >
+              <div className='form1' >
+        
+                <div className='crop_pred_att'><input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="Temperature" name="Temperature" placeholder="Enter Temperature" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="pH" name="pH" placeholder="Enter pH" /></div>
+
+                <div className='crop_pred_att'><input type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall" /></div>
+                <div className='crop_pred_att'><button id="crop-pred-btn">Get Prediction</button></div>
               </div>
-            </div>
-            <div className="row mt-4 text-center">
-              <div className="col-md-12">
-                <button type="submit" className="btn btn-success" id='recomm'>Get Recommendation</button>
-              </div>
-            </div>
-          </form>
 
+            </form>
 
-          {/* {%="card-body">
-                <h5 className="card-title">Recommend Crop is :</h5>
-                <p className="card-text">{{result}}</p>
-            </div> if result %}
-        <div className="card" style="width: 18rem;">
-            <img src="{{url_for('static', filename='img.jpg')}}" className="card-img-top" alt="...">
-            <div className
-        </div>
-        {% endif %} */}
+          </div>
 
-        </div>
+        </section>
 
 
         <script src="https://code.jquery.com/jquery.js"></script>

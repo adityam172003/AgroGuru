@@ -42,7 +42,7 @@ export const MainNavbar = () => {
     // </div>
     <>
     <section id="navbar_sec">
-      <div id="web_logo_div"><span id="sp1">Agro</span><span id="sp2">Guru</span></div>
+      <div id="web_logo_div"><NavLink to='/main'><span id="sp1">Agro</span><span id="sp2">Guru</span></NavLink></div>
       <div id="navbar_menu">
         <div id="navbar_menu_div">
           <ul id="navbar_menu_list">
