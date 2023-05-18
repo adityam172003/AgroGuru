@@ -70,7 +70,9 @@ const Login = () => {
   return (
     <>
         <section id="login_page">
-        <div id="login_page_wp"></div>
+        <div id="login_page_wp"><div id="lgn_cover">
+          <h2><span id="spn1">Agro</span ><span id="spn2" >Guru</span></h2>
+        </div></div>
         <div id="login_page_dtl">
           <div id="login_cnt">
             <p id="wel_msg">Welcome Back!</p>
