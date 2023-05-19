@@ -18,6 +18,8 @@
 }
 
 .top{
+    position: relative;
+    top: -7rem;
     margin: 5rem;
     display: inline-block;
 }
