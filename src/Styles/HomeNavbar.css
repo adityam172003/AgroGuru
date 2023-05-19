@@ -62,7 +62,7 @@
 #navbar_menu_list .nav_menu_item {
     height: 4.5rem;
     position: relative;
-    top: 2rem;
+    top: 1.5rem;
     justify-items: center;
     align-items: center;
     font-weight: 600;
@@ -110,7 +110,7 @@
     transform: translateX(-3.5rem);
     background-color: #3ACB69;
     visibility: hidden;
-    top: 3rem;
+    top: 2.5rem;
     transition: all .3s linear;
     overflow: hidden;
 }
