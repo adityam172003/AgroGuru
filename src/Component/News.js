@@ -1,45 +1,44 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import Features from './Features';
+import '../Styles/Features.css';
 import { MainContext } from '../context/agroguru_context';
 import Spinner from './Spinner';
 
 
 const News = () => {
-    const { spin,setSpin } = useContext(MainContext);
-    
-    // var axios = require("axios").default;
-    var options = {
-    method: 'GET',
-    url: 'https://api.newscatcherapi.com/v2/search',
-    params: {q: 'Agriculture', lang: 'en', sort_by: 'relevancy', page: '1', page_size:'10'},
-    headers: {
-        'x-api-key': '5fxFWVrmWLGDgYZZcnZ_kwVrW8EA72sdITt6xZo6F5E'
+    // const { spin,setSpin } = useContext(MainContext);
+    var flag = true;
+    const [data, setData] = useState({})
+    const [url, setUrl] = useState(`https://newsapi.org/v2/everything?q=agriculture&language=en&pageSize=9&apiKey=15cd77928d8440b988888b289a0c2cf4`);
+
+    const getNews = async() => {
+        const res = await axios.get(url);
+        flag = false;
+        setData(res.data);
+        console.log(res.data);
+        flag = false;
     }
-    };
 
     useEffect(() => {
-        axios.request(options).then(function (response) {
-            console.log(response.data);
-            setData(response.data);
-        }).catch(function (error) {
-            console.error(error);
-        });
-
+        // axios.get(url).then((response) => {
+        //   setData(response.data)
+        // console.log(response.data)
+        // setSpin(false);
+        getNews();
+        flag = false;
     }, [])
     
-    const [data, setData] = useState({})
-    // const url = `https://api.newscatcherapi.com/v2/search`
   
     return (
     <div className='news'>
-        {/* {data ? (
+        {/* { 
             data.articles.map((ob) => {
                 return(
-                    <Features title={ob.title} body={ob.summary} key={ob.title}/>
+                    <Features title={ob.title} body={ob.description} key={ob.title}/>
                 )
             })
-            ):<h1>News</h1>
+        
         } */}
         
     </div>

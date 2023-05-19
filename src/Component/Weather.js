@@ -16,7 +16,7 @@ function Weather() {
       console.log(response.data)
     })
   }, [])
-  console.log(data);
+  // console.log(data);
   return (
     <div className="weather">
 
