@@ -17,11 +17,12 @@ import { Nursery } from "../Pages/Main_Pages/Nursery";
 import { About }   from "../Pages/Main_Pages/About";
 import { Profile } from "../Pages/User/Profile";
 import { NurseryForm }    from "../Pages/Forms/NurseryForm";
-import { MarketForm }     from "../Pages/Forms/MarketForm";
-import { LaboratoryForm } from "../Pages/Forms/LaboratoryForm";
+import  MarketForm      from "../Pages/Forms/DemoMarket";
+// import { LaboratoryForm } from "../Pages/Forms/LaboratoryForm";
 import { Market }     from "../Pages/Main_Pages/Market";
 import { Laboratory } from "../Pages/Main_Pages/Laboratory";
 import { Forms }      from "../Layout/Forms";
+import DemoLab from '../Pages/Forms/DemoLab';
 
 import Info from "../Pages/Main_Pages/Info";
 import Services from "../Layout/Services";
@@ -43,8 +44,8 @@ const router = createBrowserRouter(
          
          <Route path="form"      element={<Forms/>}>
            <Route path="nurf"    element={<NurseryForm/>}></Route>
-           <Route path="marketf" element={<MarketForm/>}/>
-           <Route path="labf"    element={<LaboratoryForm/>}/>
+           <Route path="marketf" element={<MarketForm />}></Route>
+           <Route path="labf"    element={<DemoLab />}></Route>
          </Route>
          
          </Route>  

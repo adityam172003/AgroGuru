@@ -7,6 +7,7 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import NurseryImages from '../../NurseryImages';
 import Slider from '../../Component/Slider';
+import MapRoute from '../../Component/MapRoute';
 
 
 <link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
@@ -62,7 +63,7 @@ const [nurs,setnurs] = useState([])
   
        <section id="nur_gallery">
            <div id="nur_title">Plant Nurseries in Pune</div>
-           {
+           {/* {
             nurs.map((it)=>(<div id="nur_cart">
                <div id="nur_img_n_cnt">
                    <div id="img_dv"><img src={`https://agroguru.onrender.com/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
@@ -95,7 +96,47 @@ const [nurs,setnurs] = useState([])
                 
             </Carousel>
                </div>
-           </div>))}
+           </div>))} */}
+
+        {
+            <div id="nur_cart">
+               <div id="nur_img_n_cnt">
+                   <div id="img_dv"><img src={'../../../public/assets/ft2_img.jpg'} alt="" width="300px" height="250px"/></div>
+                   <div>
+                       <p id="nur_name">My nursery</p>
+                       <p id="nur_addr">Katraj, Pune</p>
+                       <div id="nur_tm">
+                           <div><span id="optime">open </span>8.00 AM</div>
+                           <div><span id="cltime">close </span>6.00 PM</div>
+                       </div>
+                       <div id="nur_pg_phone">
+                           <div class="but" id="nur_phone">9156331100</div>
+                           <button class="but" id="nur_map">map</button>
+                       </div>
+                   </div>
+               </div>
+               {/* <div id="nur_cart_imgs">
+               <Carousel  showThumbs={false}  autoPlay={true}  infiniteLoop={true}>
+               {
+            (it.Items)?it.Items.map((i)=>(
+              <>
+              <div className='item_img'>
+                    <img src={`https://agroguru.onrender.com/uploads/${i.photo}`} width={200} height={250}/>
+                    <span className='itemname'>{i.itemname}</span>
+                </div>
+              </>
+            )):'/'
+           
+           }
+                
+            </Carousel>
+               </div> */}
+
+              <MapRoute />
+
+           </div>}
+
+
        </section>
    </section>
     {/* <div>Nursery</div>
