@@ -66,7 +66,7 @@ const NurseryForm = () => {
 
     const onSubmit =async (data) => {
      
-      
+      console.log(data)
         let axiosConfig;
       
        
