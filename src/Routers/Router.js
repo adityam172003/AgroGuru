@@ -41,14 +41,15 @@ const router = createBrowserRouter(
           </Route>
           <Route path="/about"  element={<About/>}></Route>
           <Route path="/profile" element={<Profile/>}>
-         
-         <Route path="form"      element={<Forms/>}>
+          </Route>
+
+         <Route path="/form"      element={<Forms/>}>
            <Route path="nurf"    element={<NurseryForm/>}></Route>
            <Route path="marketf" element={<MarketForm />}></Route>
            <Route path="labf"    element={<DemoLab />}></Route>
          </Route>
          
-         </Route>  
+           
 
         <Route path="/services" element={<Services/>}>
         <Route path='crop'   element={<CropPredict/>} ></Route>

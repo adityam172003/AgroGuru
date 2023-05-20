@@ -63,7 +63,7 @@ const [nurs,setnurs] = useState([])
   
        <section id="nur_gallery">
            <div id="nur_title">Plant Nurseries in Pune</div>
-           {/* {
+           {
             nurs.map((it)=>(<div id="nur_cart">
                <div id="nur_img_n_cnt">
                    <div id="img_dv"><img src={`https://agroguru.onrender.com/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
@@ -96,9 +96,11 @@ const [nurs,setnurs] = useState([])
                 
             </Carousel>
                </div>
-           </div>))} */}
+           </div>))}
 
-        {
+        {/* <----------------------- Static Nursery Code below for CSS Styling -------------------> */}
+
+        {/* {
             <div id="nur_cart">
                <div id="nur_img_n_cnt">
                    <div id="img_dv"><img src={'../../../public/assets/ft2_img.jpg'} alt="" width="300px" height="250px"/></div>
@@ -115,7 +117,7 @@ const [nurs,setnurs] = useState([])
                        </div>
                    </div>
                </div>
-               {/* <div id="nur_cart_imgs">
+               <div id="nur_cart_imgs">
                <Carousel  showThumbs={false}  autoPlay={true}  infiniteLoop={true}>
                {
             (it.Items)?it.Items.map((i)=>(
@@ -130,11 +132,11 @@ const [nurs,setnurs] = useState([])
            }
                 
             </Carousel>
-               </div> */}
+               </div>
 
               <MapRoute />
 
-           </div>}
+           </div>} */}
 
 
        </section>

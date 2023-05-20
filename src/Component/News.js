@@ -31,7 +31,6 @@ const News = () => {
                     <Features title={ob.title} body={ob.description} key={ob.title}/>
                 )
             })
-        
         }
         
     </div>

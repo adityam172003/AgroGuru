@@ -10,7 +10,7 @@ const navigate = useNavigate();
     <section class="profile_sec profile_not_avail" id="sec3">
             <div class="profile_lyr">
                 <div class="profile_not_text">Elevate your plant market to new heights by showcasing it on our website. Join our thriving community and let your green business flourish like never before!</div>
-                <div class="profile_not_btn"><button onClick={navigate('/profile/form/marketf')}>Add Market</button></div>
+                <div class="profile_not_btn"><button onClick={() => navigate('/form/marketf')}>Add Market</button></div>
             </div>
         </section>
         </>
