@@ -1,37 +1,99 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
+import axios from 'axios'
+
+var itemFormData = new FormData();
+
 const ProfileLabAv = () => {
-  return (
+
+    const schema = yup.object().shape({
+        name: yup.string(),
+        address: yup.string(),
+        phone: yup.number(),
+        offDay: yup.string().required("Off-Day is required"),
+    })
+
+    const {register, handleSubmit} = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    const onSubmit = (data) => {
+        console.log(data);
+    }
+
+    const imageSubmitHandle = async (e) => {
+        e.preventDefault();
+        console.log()
+        // console.log()
+        // // const itemName = e.target.value.itemName;
+        // // const itemImage = e.target.value.itemImage;
+        // // setImageForm({itemName, itemImage});
+
+        // itemFormData.append("itemname",e.target.itemName.value);
+        // itemFormData.append("photo",e.target.itemImage.files[0]);
+        // const  axiosConfig = {            
+        //     headers: {
+        //         'Content-Type': "multipart/form-data",
+        //         "Access-Control-Allow-Origin": "*",
+        //     }
+        // }
+        // await axios.post('/laboratory/itemadd',itemFormData,axiosConfig)
+        // .then((it)=>{
+        //     console.log("item added");
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
+        // e.target.reset();
+    }
+
+    return (
     <>
     <section class="profile_sec profile_avail" i id="sec6">
             <div class="profile_lyr">
                 <div class="profile_sec_avail_text">Update Lab</div>
                 <div class="profile_info_edit">
-                    <form class="frms" action="">
-                        <input type="text"/>
-                        <input type="text"/>
-                        <input type="text"/>
-                        <input type="text"/>
+                    <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
+                    <input type='text' name='name' placeholder={`Name : Hello`} {...register("name")}/>
+                    <input type='text' name='address' placeholder='Address of Laboratory' {...register('address')}/>
+                    <input type='text' name='phone' placeholder='Enter Contact-Number of Laboratory' {...register("phone")}/>
+                    <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
                         <div class="tms">
-                         <div class="st_tm">Open :  8:00</div>
+                        <div class="st_tm">Open :  8:00</div>
                         <div class="cl_tm">Close :  5:00</div>
                         </div>
                         <div class="eml">Email : rahul@mail.com</div>
-                        <div class="profile_edit_submit"> <button>Edit</button></div>
+                        <div class="profile_edit_submit">
+                            <button>Update</button>
+                        </div>
                     </form>
                    </div>
                    <div class="profile_item_add">
                     <p class="it_add_text">Add New Items</p>
-                    <form class="profile_edit_add_it" action="">
-                        <div class="it_nm">
+                        <form class="profile_edit_add_it" action="" onSubmit={imageSubmitHandle}>
+                        {/* <div class="it_nm">
                             <label for="">Item Name</label><br/><input type="text"/>
                         </div>
                         <div class="it_second">
                             <label for="">Item Image</label><br/><input type="file"/>
                         </div>
-                        <div class="it_submit"><button>submit</button></div>
-                    </form>
-                   </div>
+                        <div class="it_submit"><button>submit</button></div> */}
+                            <div className='it_nm'>
+                            <label>Item Name</label>
+                                <input type="text" name='itemName'/>
+                            </div>
+                            <div className="it_second">
+                            <label>Item Images</label>
+                                <input type="file" name='itemImage'/>
+                            </div>
+                            <div className="it_submit">
+                                <button id="lab_form_item_sub" type='submit'>submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
     
         </section>

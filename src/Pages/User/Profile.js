@@ -21,8 +21,8 @@ export const Profile = () => {
   const [dat,setdat ] =useState();
 
   const [isNur, setIsNur] = useState(true);
-  const [isMar, setIsMar] = useState(false);
-  const [isLab, setIsLab] = useState(false);
+  const [isMar, setIsMar] = useState(true);
+  const [isLab, setIsLab] = useState(true);
 
   const getuser = async()=>{
     await axios.get('/user/getuser')
@@ -49,7 +49,6 @@ useEffect(()=>{
     
     <>
     <MainNavbar/>
-        
     <UserDetail />
     {isNur ? <ProfileNurAv/> : <ProfileNurNa/>}
     {isMar ? <ProfileMarAv/> : <ProfileMarNa/>}

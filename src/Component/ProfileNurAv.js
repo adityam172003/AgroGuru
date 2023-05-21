@@ -1,10 +1,25 @@
 import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import {yupResolver} from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
+
 
 const ProfileNurAv = () => {
     const [toggle, setToggle] = useState(true)
 
-    const handleSubmit = (data) => {
+    const schema = yup.object().shape({
+        name: yup.string(),
+        address: yup.string(),
+        phone: yup.number(),
+        offDay: yup.string().required("Off-Day is required"),
+    })
+
+    const {register, handleSubmit} = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    const onSubmit = (data) => {
         console.log(data);
     }
 
@@ -13,23 +28,20 @@ const ProfileNurAv = () => {
     <div class="profile_lyr">
        <div class="profile_sec_avail_text">Update Your Nursery </div>
        <div class="profile_info_edit">
-        <form class="frms" action="" onSubmit={handleSubmit}>
-            {toggle ? <input type="text" name='name' value={`Samarth`} /> : 
-            <input type='text' name='name'/>}
-            {toggle ? <input type="text" name='address' value={`Sangli`}/> : 
-            <input type='text' name='address'/>}
-            {toggle ? <input type="text" name='phone' value={`1234567890`}/> : 
-            <input type='text' name='phone'/>}
-            {toggle ? <input type="text" name='offday' value={`Sunday`}/> : 
-            <input type='text' name='offday'/>}
+        <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
+            <input type='text' name='name' placeholder={`Name : Hello`} {...register("name")}/>
+            <input type='text' name='address' placeholder='Address ' {...register('address')}/>
+            <input type='text' name='phone' placeholder='Enter Contact-Number ' {...register("phone")}/>
+            <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
             <div class="tms">
              <div class="st_tm">Open :  8:00</div>
             <div class="cl_tm">Close :  5:00</div>
             </div>
             <div class="eml">Email : rahul@mail.com</div>
-            {toggle ? <div class="profile_edit_submit"> <button onClick={(e) => {e.preventDefault();setToggle(!toggle)}}>Edit</button></div>:
-            <div class="profile_edit_submit"> <button type='submit' onClick={(e) => {e.preventDefault();setToggle(!toggle)}}>Submit</button></div>}
-        </form>
+            <div class="profile_edit_submit">
+                <button>Update</button>
+            </div>
+            </form>
        </div>
        <div class="profile_item_add">
         <p class="it_add_text">Add New Items</p>
