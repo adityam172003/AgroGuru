@@ -17,7 +17,7 @@ function CropPredict() {
 
   const [vals, setvals] = useState({});
 
-  const [crop, setcrop] = useState("Crop Predication")
+  const [cro, setcrop] = useState("Crop Predication")
   const getPrediction = async () => {
     axios.get(url, {
       params: {
@@ -33,10 +33,8 @@ function CropPredict() {
     },)
       .then((dat) => {
 
-        const data = dat;
-
-        console.log(data)
-
+        console.log(dat)
+        setcrop(dat.data.Predicted)
 
       })
       .catch((err) => {
@@ -49,7 +47,7 @@ function CropPredict() {
 
 
   return (
-    <>
+   
       <section id="crop_predict_pag">
         <section>
           <div className='crop-pred-bg'>
@@ -71,7 +69,7 @@ function CropPredict() {
       <section id='maincontainer'>
         <div id='form-img-wrap'>
           <div id="form-img">
-            <Result crop={"Blackgram"} />
+            <Result crop={cro} />
           </div>
         </div>
         <div id="form-content">
@@ -81,31 +79,27 @@ function CropPredict() {
           <form >
             <div className='form1' >
 
-              <div className='crop_pred_att'><input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Nitrogen:e.target.value})}} type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Phosporus:e.target.value})}}type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Potassium:e.target.value})}}  type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="Temperature" name="Temperature" placeholder="Enter Temperature" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Temperature:e.target.value})}} type="number" id="Temperature" name="Temperature" placeholder="Enter Temperature" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Humidity:e.target.value})}} type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="pH" name="pH" placeholder="Enter pH" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,pH:e.target.value})}} type="number" id="pH" name="pH" placeholder="Enter pH" /></div>
 
-              <div className='crop_pred_att'><input type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall" /></div>
-              <div className='crop_pred_att'><button id="crop-pred-btn">Get Prediction</button></div>
-
-              <div className="row mt-4 text-center">
-                <div className="col-md-12">
-                  <button onClick={(e) => {
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Rainfall:e.target.value})}} type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall" /></div>
+              <div className='crop_pred_att'><button  onClick={(e) => {
                     e.preventDefault();
                     console.log(vals)
-                    console.log(JSON.parse(vals.Nitrogen));
+                  
                     getPrediction()
-                  }} className="btn btn-success" id='recomm'>Get Recommendation</button>
-                </div>
-              </div>
+                  }}id="crop-pred-btn">Get Prediction</button></div>
+
+              
               </div>
 
             </form>

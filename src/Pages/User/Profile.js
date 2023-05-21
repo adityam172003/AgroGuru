@@ -29,23 +29,13 @@ export const Profile = () => {
     let status = 200;
     axios.get('/nursery/usernursery')
     .then((res)=>{
-      status = res.status;
+      setIsNur(res.data);
     })
     .catch((err)=>{
-     status=err.status
-      console.log(err);
+      setIsNur(false);
     })
 
-    
-    if(status ==200)
-  {
-    setIsNur(true);
-    
-  }
-  else{
-    setIsNur(false);
-  }
-
+   
 
   }
 
@@ -55,10 +45,10 @@ export const Profile = () => {
     let status = 200
     axios.get('/lab/userlab')
     .then((res)=>{
-      status= res.status;
+      setIsLab(res.data);
     })
     .catch((err)=>{
-      console.log(err);
+      setIsLab(false);
     })
 
 
@@ -77,19 +67,12 @@ export const Profile = () => {
     let status = 200
     axios.get('/market/usermarket')
     .then((res)=>{
-      status = res.status;
+      setIsMar(res.data);
     })
     .catch((err)=>{
-      console.log(err);
-    })
-    if(status ==200)
-    {
-      setIsMar(true);
-      
-    }
-    else{
       setIsMar(false);
-    }
+    })
+   
   }
   const getuser = ()=>{
      axios.get('/user/getuser')
