@@ -80,13 +80,14 @@
   }
 #mar_times{
     display: flex;
-    gap: 2rem;
+    gap: .8rem;
+    color: white;
 }
 #mar_in_time,#mar_out_time{
-    padding-right: 1rem;
+    padding-right: .4rem;
 }
 #mar_times input{
-    width: 5rem;
+    width: 6.9rem;
 }
 /* #mar_form_cnt label{
     padding-left: .5rem;

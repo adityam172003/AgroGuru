@@ -128,12 +128,18 @@ const LaboratoryForm = () => {
             <div className='attri'>
                 <input type="text" placeholder='Enter Contact-Number of Laboratory' {...register("phone")}/>
             </div>
-            <div className='attri'>
-                <input type='time' placeholder='Opening Time' {...register("openTime")}/>
-            </div>
-            <div className='attri'>
-                <input type='time' placeholder='Closing Time' {...register("closeTime")}/>
-            </div>
+            <div id="lab_times" className='attri'>
+                       <div>
+                           <label for="lab_in_time">Opening Time</label>
+                           <input type="time" id="lab_in_time"{...register("openTime")}/>
+                           {/* <p>{errors.openTime?.message}</p> */}
+                       </div>
+                       <div>
+                           <label for="lab_out_time">Closing Time</label>
+                           <input type="time" id="lab_out_time" {...register("closeTime")}/>
+                           {/* <p>{errors.closeTime?.message}</p> */}
+                       </div>
+                   </div>
             <div className='attri'>
                 <input type="text" placeholder='Enter your Off-Day' {...register("offDay")}/>
             </div>

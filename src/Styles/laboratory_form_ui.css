@@ -73,26 +73,33 @@
 }
 #lab_times{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 .attri{
     padding-bottom: 1rem;
+}
+#lab_times{
+    display: flex;
+    gap: .5rem;
+   
 }
 #lab_form ::placeholder {
     color: #C5EF8F;
     opacity: .7; 
   }
 #lab_times input{
-    width: 6rem;
+    width: 7rem;
 }
+
+
 #lab_in_time,#lab_out_time{
     padding-right: 1rem;
 }
-/* #lab_form_cnt label{
-    padding-left: .5rem;
+#lab_form_cnt label{
+    padding-right: .5rem;
     font-weight: 500;
     color: #c6f090;
-} */
+}
 #lab_form_cnt input{
     padding-left: 1rem;
     background: #92a871;

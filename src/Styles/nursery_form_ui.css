@@ -82,14 +82,14 @@
   }
 #nur_times{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
    
 }
 #nur_in_time,#nur_out_time{
-    padding-right: 1rem;
+    padding-right: .5rem;
 }
 #nur_times input{
-    width:5rem;
+    width:6.5rem;
 }
 #nur_form_cnt label{
     padding-left: .5rem;

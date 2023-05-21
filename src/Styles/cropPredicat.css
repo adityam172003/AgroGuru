@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+#crop_predict_pag{
+    width: 100%;
+    margin-top: 4.5rem;
+
+}
 #maintext{
     display: flex;
     justify-content: center;
@@ -37,7 +42,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 0 0 20px 20px;
-    /* border-radius: 50px; */
 
 }
 #form-img{
@@ -46,10 +50,7 @@
   background-image: url('../images/3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 20px 0 0 20px;
-
-  /* border-radius: 50px; */
-  /* box-shadow: 0 0 20px -4px black; */
+  border-radius: 20px 0 0px 20px;
 }
 
 #form-content{
@@ -58,10 +59,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-left: 2rem; */
     background-color: white;
     border-radius: 0 20px 20px 0;
-    /* margin-left: rem; */
     
 }
 #form-content form{
@@ -113,10 +112,9 @@
 
 
 /* crop predication top container */
-#top-crop-pred-bg{
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
+
+
+.crop-pred-bg{
     margin-top: 4.5rem;
    width: 100%;
    height: 25rem;
@@ -124,6 +122,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    font-family: 'poppins',sans-serif;
+   
    
 }
 

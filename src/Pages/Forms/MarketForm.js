@@ -179,7 +179,7 @@ const MarketForm = () => {
                        <input type="text" id="mar_form_phone"{...register("phone")} placeholder='Contact Number'/>
                        {/* <p>{errors.phone?.message}</p> */}
                    </div>
-                    {/* <div id="mar_times" className='attri'>
+                    <div id="mar_times" className='attri'>
                        <div>
                            <label id="mar_in_time">Opening Time</label>
                            <input type="time" id="mar_in_time"{...register("openTime")}/>
@@ -190,8 +190,9 @@ const MarketForm = () => {
                            <input type="time"  {...register("closeTime")}/>
                            <p>{errors.closeTime?.message}</p>
                        </div>
-                   </div>  */}
+                   </div> 
                    <div className='attri'>
+                       
                        <input type="text" id="mar_off_day"{...register("offDay")} placeholder='Enter Off Day'/>
                        {/* <p>{errors.offDay?.message}</p> */}
                    </div>
