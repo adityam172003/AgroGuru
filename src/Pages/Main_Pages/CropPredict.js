@@ -5,6 +5,11 @@ import NurseryImages from '../../NurseryImages';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import croppredictlogo from '../../static/crop-prediction.json'
+import Lottie from '../../Component/Lottie'
+import Result from './Result';
+
+
 
 function CropPredict() {
 
@@ -15,33 +20,36 @@ function CropPredict() {
   return (
     <>
       <section id="crop_predict_pag">
-        <section>
+        <section id='top-crop-pred-bg'>
           <div className='crop-pred-bg'>
             <div className='crop-pred-bg-layer'>
-              <div id='content-crp'>
-                <h2>Crop Predication</h2>
-                <p>Crosjfdslfjdslfjdslfsdsddjfklds</p>
+              <div id='content-crop'>
+                <h2>Get your <br/> <span id='crp_text'>Crop Predicted<span>🌿</span></span></h2>
+                <p>Here, we provide valuable information and insights to help you make <br/> informed decisions about crop selection and cultivation</p>
               </div>
-              <div className='content-crp-jif'></div>
-            </div>
+              <div className='content-crp-jif'> 
+              <Lottie id="lottie-crop-pred" data={croppredictlogo} height={'23rem'}  width={'23rem'}/>
+              </div> 
+           </div>
           </div>
         </section>
 
-        <div id>
+        {/* <div id>
           <h1 id='maintext'>Crop Predication<span>🌿</span></h1>
-        </div>
+        </div> */}
         <section id='maincontainer'>
-          <di id='form-img-wrap'>
+          <div id='form-img-wrap'>
             <div id="form-img">
-            </div>
-          </di>
+              <Result crop={"Blackgram"}/>
+            </div> 
+          </div>
           <div id="form-content">
             <div id='form-crop-pred-title'>
               <h2>Predict Crop</h2>
             </div>
             <form >
               <div className='form1' >
-        
+
                 <div className='crop_pred_att'><input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" /></div>
 
                 <div className='crop_pred_att'><input type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus" /></div>
@@ -64,9 +72,6 @@ function CropPredict() {
 
         </section>
 
-
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
       </section>
     </>
   )

@@ -1,0 +1,58 @@
+.result-predict-crop{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.result-predict-crop-layer{
+    width: 100%;
+    height: 100%;
+    background: rgba(97, 163, 39, 0.5);
+    backdrop-filter: blur(4px);
+     display: flex;
+}
+
+.result-predict-crop img{
+    position: relative;
+    margin: 4.5rem 0;
+    margin-bottom: 2rem;
+    width: 40%;
+    height: 40%;
+    border-radius: 1rem;
+}
+.result-predict-crop .result-txt{
+    position: relative;
+    left: 0rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(27, 25, 25);
+}
+.result-predict-crop #result-crop-name-txt{
+    font-size: 2.5rem;
+    color:white;
+    font-weight: 700;
+    font-family: 'poppins',sans-serif;
+}
+.result-predict-crop #result-crop-period-txt{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.result-predict-crop .result-desc-txt #result-crop-desc-txt{
+    word-break:keep-all;
+    height: auto;
+    margin-top: 2rem;
+    padding: 0.3rem 4rem;
+    text-align:justify;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgb(15, 48, 0);
+}
+
+#result-crop-desc-txt{
+    background-color: rgba(255, 200, 0, 0.632);
+}
