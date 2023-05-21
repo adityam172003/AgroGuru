@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-#nur_page{
+#lab_page{
     width: 100%;
     height: 100rem;
     background-color:white;
@@ -16,16 +16,16 @@
     margin-bottom: 15rem;
 
 }
-#nur_gallery{
+#lab_gallery{
    width: 98%;
    /* height: fit-content; */
    padding: 1.5rem;
-   background-color: #79bd65;
+   background-color: #62cc6c;
    display: grid;
    grid-template-columns: 1fr;
    row-gap: 1.5rem;
 }
-#nur_cart{
+#lab_cart{
     padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
@@ -33,12 +33,12 @@
     border-radius: 20px;
     box-shadow: 0 0 10px -3px;
 }
-#nur_pg_phone{
+#lab_pg_phone{
     padding-top: 2rem;
     display: flex;
     gap: 1rem;
 }
-#nur_cart_imgs{
+#lab_cart_imgs{
     width: 30%;
     /* background-color: #76a887; */
     display: flex;
@@ -49,19 +49,19 @@
     border-radius: 20px;
     /* overflow: hidden; */
 }
-#nur_img_n_cnt{
+#lab_img_n_cnt{
     display: flex;
     gap: 1.5rem;
 }
-#nur_img_n_cnt p{
+#lab_img_n_cnt p{
     width: 20rem;
 
 }
-#nur_tm{
+#lab_tm{
     display: flex;
     gap: 1rem;
 }
-#nur_news_cl{
+#lab_news_cl{
     position: relative;
     width: 98%;
     height: 20rem;
@@ -70,7 +70,7 @@
    
 }
 
-#nur_title{
+#lab_title{
     font-weight: 700;
     font-size: 2.3rem;
     width: 98%;
@@ -83,21 +83,21 @@
    align-items: center;
    
 }
-#nur_name{
+#lab_name{
    font-size: 2rem;
    font-weight: 600;
    padding-bottom: 0;
 }
-#nur_cart_imgs .item_img{
+#lab_cart_imgs .item_img{
   width: 100%;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
-#nur_addr{
+#lab_addr{
     padding-bottom: 1rem;
 }
-#nur_cart_imgs button{
+#lab_cart_imgs button{
     width: 6%;
 }
 .but{
@@ -120,7 +120,7 @@
 #cltime{
     color: red;
 }
-#nur_phone{
+#lab_phone{
     background-image: url('../../public/assets/phone_img.png');
     background-repeat: no-repeat;
     background-size: 22px;
@@ -140,7 +140,7 @@
 #img_dv img:hover{
     transform: scale(1.1);
 }
-#nur_map:hover{
+#lab_map:hover{
    background-color: #4c6543;
    
 }
@@ -162,11 +162,4 @@
     backdrop-filter: blur(8px);
     border-radius: 20px;
     color: white;
-}
-
-.gmapbox {
-    position:absolute;
-    left: 50rem;
-    width: 100%;
-    height: 100%;
 }

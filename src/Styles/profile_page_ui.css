@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#profile_pg{
+    margin-top: 4.5rem;
+    width: 100%;
+    /* height: 80rem; */
+    /* background-color: antiquewhite; */
+   font-family: 'poppins',sans-serif;
+}
+
+#profile_main{
+    width: 100%;
+    height: 33rem;
+}
+#profile_pg_bg{
+    width: 100%;
+    height: 20rem;
+    background-image: url('../../public/assets/profile_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#profile_pg_bg_cover{
+    width: 100%;
+    height: 20rem;
+    background: rgba(49, 49, 49, 0.3);
+}
+#profile_dp{
+    position: relative;
+    top:-310px;
+    left: 70px;
+    width: 15rem;
+    height: 15rem;
+     background-image: url('../../public/assets/user.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+    border-radius: 500px;
+    box-shadow: 0 0 20px -1px;
+}
+
+#profile_user_info{
+    width: 100%;
+    height: 13rem;
+    position: relative;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+   padding: .5rem 21rem;
+   background-color: #f6f6f6;
+
+}
+#profile_user_info #profile_user_name{
+    padding-left: .5rem;
+}
+#profile_user_contact{
+    margin-top: .2rem;
+    width: 50%;
+    height: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+#profile_user_contact #user_ph{
+     width: 33%;
+     height: 100%;
+     background-image: url('../../public/assets/phone_icon.png');
+     background-repeat: no-repeat;
+     background-size: 1.5rem;
+     background-position: 0%;
+     padding-left: 1.7rem;
+     padding-top: .3rem;
+}
+#profile_user_contact #user_mail{
+     width: 60%;
+     height: 100%;
+     background-image: url('../../public/assets/email_icon.png');
+     background-repeat: no-repeat;
+     background-size: 1.5rem;
+     background-position: 2%;
+     padding-left: 2.2rem;
+     padding-top: .3rem;
+}
+
+#user_avail{
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 1rem;
+}
+#user_avail .user_avl_it{
+    width: 20%;
+    height: 75%;
+    background-color: aliceblue;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px -3px;
+}
+#user_avail .user_avl_it span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+#user_avail #nr{
+    width: 13%;
+    background-color: #9FD9A5;
+    color: #0A6F14;
+}
+#user_avail #mr{
+    width: 13%;
+    background-color: #F5A6A6;
+    color: #E03636;
+}
+#user_avail #lb{
+    width: 15%;
+    background-color: #E7F399;
+    color: #64720B;
+}
+
+
+/* Availabilities */
+.profile_sec{
+    width: 100%;
+    height: 38rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.profile_avail .profile_lyr{
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 3rem;
+
+}
+.profile_not_avail .profile_lyr{
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.65);
+}
+#sec6 .profile_info_edit ,#sec6 .profile_item_add{
+    background: rgba(8, 8, 8, 0.5);
+}
+.profile_not_text{
+    width: 100%;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    color: white;
+}
+.profile_not_btn{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.profile_not_btn button{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all ease-in-out .3s;
+}
+.profile_not_btn button:hover{
+      transform: scale(1.08);
+      cursor: pointer;
+}
+
+#sec1,#sec2{
+    background-image: url('../../public/assets/nursery_profile_bg.jpg');
+}
+#sec3,#sec4{
+    background-image: url('../../public/assets/market_profile_bg.jpg');
+}
+#sec5,#sec6{
+    background-image: url('../../public/assets/lab_nursery_bg.jpg');
+}
+#sec1 button{
+    background-color: #03A012;
+}
+#sec1 button:hover{
+    background-color: white;
+    color: #03A012;
+}
+#sec3 button{
+    background-color: #DB4E4E;
+}
+#sec3 button:hover{
+    background-color: white;
+    color: #DB4E4E;
+}
+#sec5 button{
+    background-color: #FBA443;
+}
+#sec5 button:hover{
+    background-color: white;
+    color: #FBA443;
+}
+ .profile_nur_avail .profile_lyr{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile_sec_avail_text{
+    width: 20%;
+    height: 100%;
+    font-weight: 650;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 6rem 2rem;
+    color: white;
+}
+.frms{
+    width: 100%;
+    height: 100%;
+    display: flex;
+ flex-direction: column;
+ justify-content: baseline;
+ align-items: baseline;
+ gap: 2rem;
+}
+.profile_info_edit{
+    width: 40%;
+    height: 85%;
+    background: rgba(217, 217, 217, 0.5);
+border-radius: 3rem;
+ padding: 2rem 2rem 1rem 4rem;
+ gap: 2rem;
+}
+
+.profile_info_edit input{
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    font-weight:550;
+    font-size: 1.3rem;
+}
+.profile_item_add{
+    width: 30%;
+    height: 85%;
+    background: rgba(217, 217, 217, 0.5);
+border-radius: 40px;
+}
+.profile_info_edit .tms{
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 3rem;
+    font-weight: 700;
+}
+.profile_info_edit .eml,.profile_info_edit .tms{
+    width: 90%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 3rem;
+    font-weight: 600;
+    color: black;
+    font-size: 1.3rem;
+    padding-left: .5rem;
+}
+.profile_edit_submit{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    padding-left: 8.3rem;
+    align-items: center;
+}
+.profile_edit_submit button{
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #23a32f;
+    color: white;
+    transition: all ease-in-out .2s;
+    
+}
+.profile_edit_submit button:hover{
+    transform: scale(1.07);
+    background-color: white;
+    color: green;
+}
+.it_add_text{
+    width: 100%;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.profile_item_add{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.profile_edit_add_it{
+width: 100%;
+height: 100%;
+color: black;
+padding: 1rem 3rem;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+gap: 1.8rem;
+}
+.profile_edit_add_it label{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.profile_edit_add_it input{
+    width: 16rem;
+    height: 2.3rem;
+    margin-top: .5rem;
+    border-radius: 40px;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 550;
+    background-color: white;
+    padding-top: .3rem;
+}
+.profile_edit_add_it .it_submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_edit_add_it .it_submit button{
+    width: 10rem;
+    height: 2.3rem;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #df6727;
+    color: white;
+    transition: all ease-in-out .2s;
+}
+.profile_edit_add_it .it_submit button:hover{
+    transform: scale(1.08);
+    background-color: white;
+    color: rgb(230, 53, 53);
+}
+#sec6 form,#sec6 .tms,#sec6 .eml{
+color: white;
+}
+
+#sec6 .profile_sec_avail_text{
+    padding-top: 8rem;
+}

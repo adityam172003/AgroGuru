@@ -3,6 +3,7 @@ import React from 'react'
 import Weather from '../../Component/Weather'
 import Lottie from '../../Component/Lottie'
 import weather from '../../static/weather-lottie.json' 
+import News from '../../Component/News'
 
 const Info = () => {
   return (
@@ -11,6 +12,7 @@ const Info = () => {
         <Lottie data={weather} height={`300px`} width={`300px`}/>
       </div>
       <Weather />
+      <News />
     </div>
   )
 }

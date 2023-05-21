@@ -52,11 +52,21 @@
     animation: scroll 40s linear infinite;
 }
 
+.slider{
+  /* position: absolute; */
+  margin-bottom: 10rem;
+}
+
 .carousel {
+    position: absolute;
+    margin-top: 0;
+    padding-top: 0;
+    top: 0rem;
+    left: 1rem;
     cursor: grab;
     overflow: hidden;
-    margin: 1rem 0;
-    padding: 1rem;
+    /* margin: 1rem 0; */
+    /* padding: 1rem; */
 }
 
 @keyframes scroll {

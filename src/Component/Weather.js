@@ -33,8 +33,8 @@ function Weather() {
       setData(response.data)
       console.log(response.data)
     })
-  }, [lgn,])
-  console.log(data);
+  }, [])
+  // console.log(data);
   return (
     <div className="weather">
 

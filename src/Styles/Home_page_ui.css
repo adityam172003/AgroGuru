@@ -75,7 +75,7 @@
 
 #hero_img_text3 {
     position: absolute;
-    top: 21rem;
+    top: 20rem;
     padding-left: 16rem;
 
 }
@@ -139,7 +139,7 @@
     font-weight: 700;
     font-size: 3.4rem;
     color: #00940F;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     padding-top: 3rem;
 
 }

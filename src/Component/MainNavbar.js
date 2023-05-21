@@ -28,21 +28,9 @@ export const MainNavbar = () => {
   }
 
   return (
-    // <div className='MainNavbar'>
-    //   <div className='links'>
-    //         <NavLink to='/main/about'>Home</NavLink>
-    //         <NavLink to='/main/crop'>CropPredict</NavLink>
-    //         <NavLink to='/main/nur'>Nursery</NavLink>
-    //         <NavLink to='/main/market'>Market</NavLink>
-    //         <NavLink to='/main/lab'>Lab</NavLink>
-    //         <NavLink to='/main/info'>Info</NavLink>
-    //         <NavLink to='/main/profile'>Profile</NavLink>
-    //         <button onClick={userLogout} >logout</button>
-    //   </div>
-    // </div>
     <>
     <section id="navbar_sec">
-      <div id="web_logo_div"><span id="sp1">Agro</span><span id="sp2">Guru</span></div>
+      <div id="web_logo_div"><NavLink to='/main'><span id="sp1">Agro</span><span id="sp2">Guru</span></NavLink></div>
       <div id="navbar_menu">
         <div id="navbar_menu_div">
           <ul id="navbar_menu_list">
@@ -71,7 +59,6 @@ export const MainNavbar = () => {
                     isPending ? "pending" : isActive ? "active" : ""
                   }>Info</NavLink></li>
                 </ul>
-
               </div>
             </li>
             <li class="nav_menu_item"><NavLink to='/about' className={({ isActive, isPending }) =>
