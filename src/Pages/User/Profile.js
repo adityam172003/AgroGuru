@@ -117,7 +117,6 @@ useEffect(()=>{
   
 },[])
 
-console.log(dat.name);
   return (
     
     <>
