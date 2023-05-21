@@ -1,4 +1,4 @@
-.news{
+/* .news{
     justify-content: center;
     align-items: center;
     display: grid;
@@ -8,7 +8,7 @@
 
 .feature-container {
     text-align: baseline;
-    width: 300px;
+    width: 20rem;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     transition: 1s;
@@ -43,4 +43,76 @@
 .card-body{
     padding: 0rem 0.6rem;
     padding-bottom: 0.8rem;
+} */
+
+#news_feature{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+
+#news_feature h2{
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+    /* background-color: #57d0cd; */
+    /* background: linear-gradient(270deg, #D00BBD 30.77%, rgba(209, 14, 120, 0.93934) 18.68%, rgba(209, 19, 19, 0.85) 22.97%); */
+    /* background-image: linear-gradient(to right top, #e90208, #fb003e, #ff006b, #fe0099, #eb12c6); */
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; */
+    background-color: #008793;
+    color: white;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#info_pg_gallery{
+    width: 100%;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 4rem;
+    margin-bottom: 30rem;
+}
+
+.features_news_card{
+    width: 28rem;
+    box-shadow: 0 0 15px -4px;
+    border-radius: 1rem;
+  
+}
+.card-title{
+    width: 100%;
+    /* background-image: linear-gradient(to right top, #1d3f5c, #004d7a, #008793, #00bf72, #a8eb12); */
+    background-image: linear-gradient(to right top, #6bbed1, #5ec7d1, #57d0cd, #5ad8c4, #68dfb7, #68e1aa, #6de29b, #76e28b, #6cde79, #62d965, #5bd54e, #54d034);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem;
+    color: rgb(54, 57, 139);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-body{
+    width: 100%;
+    padding: .5rem .5rem 2rem .5rem ;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }

@@ -10,7 +10,7 @@ const News = () => {
         description : 'News Description'
     }]})
     
-    const url = `https://newsapi.org/v2/everything?q=agriculture&language=en&pageSize=9&apiKey=15cd77928d8440b988888b289a0c2cf4`;
+    const url = `https://newsapi.org/v2/everything?q=agriculture&language=en&pageSize=12&apiKey=15cd77928d8440b988888b289a0c2cf4`;
 
     const getNews = async() => {
         const res = await axios.get(url);
@@ -24,14 +24,19 @@ const News = () => {
     
   
     return (
-    <div className='news'>
-        { 
-            data.articles.map((ob) => {
-                return(
-                    <Features title={ob.title} body={ob.description} key={ob.title}/>
-                )
-            })
-        }
+    <div id="news_feature">
+        <h2>AgriNews Digest</h2>
+        <section id="info_pg_gallery">
+            {
+                data.articles.map((ob) => {
+                    return(
+            
+                            <Features title={ob.title} body={ob.description} key={ob.title}/>
+            
+                    )
+                })
+            }
+        </section>
         
     </div>
   )
