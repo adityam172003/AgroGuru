@@ -18,17 +18,67 @@ export const Profile = () => {
 
   
   const nevigate = useNavigate();
-  const [dat,setdat ] =useState();
+  const [dat,setdat ] =useState({});
 
-  const [isNur, setIsNur] = useState(true);
-  const [isMar, setIsMar] = useState(false);
-  const [isLab, setIsLab] = useState(false);
+  const [isNur, setIsNur] = useState();
+  const [isMar, setIsMar] = useState();
+  const [isLab, setIsLab] = useState();
 
-  const getuser = async()=>{
-    await axios.get('/user/getuser')
+
+  const isnursery =()=>{
+    let status = 200;
+    axios.get('/nursery/usernursery')
     .then((res)=>{
-       setdat(res.data.name);
-       console.log(res.data.name)
+      setIsNur(res.data);
+    })
+    .catch((err)=>{
+      setIsNur(false);
+    })
+
+   
+
+  }
+
+  
+  
+  const islab =  ()=>{
+    let status = 200
+    axios.get('/lab/userlab')
+    .then((res)=>{
+      setIsLab(res.data);
+    })
+    .catch((err)=>{
+      setIsLab(false);
+    })
+
+
+    if(status ==200)
+    {
+      setIsLab(true);
+      
+    }
+    else{
+      setIsLab(false);
+    }
+  
+  }
+  
+  const ismarket =  ()=>{
+    let status = 200
+    axios.get('/market/usermarket')
+    .then((res)=>{
+      setIsMar(res.data);
+    })
+    .catch((err)=>{
+      setIsMar(false);
+    })
+   
+  }
+  const getuser = ()=>{
+     axios.get('/user/getuser')
+    .then((res)=>{
+       setdat(res.data);
+       
     })
     .catch(()=>{
        
@@ -41,16 +91,21 @@ export const Profile = () => {
 }
 
 useEffect(()=>{
-    getuser();
-},[])
 
+    getuser();
+
+    isnursery();
+    islab();
+    ismarket();
+  
+},[])
 
   return (
     
     <>
-    <MainNavbar/>
+    <MainNavbar />
         
-    <UserDetail />
+    <UserDetail name={dat.name} email={dat.email} phone = {dat.phone} />
     {isNur ? <ProfileNurAv/> : <ProfileNurNa/>}
     {isMar ? <ProfileMarAv/> : <ProfileMarNa/>}
     {isLab ? <ProfileLabAv/> : <ProfileLabNa/>}
