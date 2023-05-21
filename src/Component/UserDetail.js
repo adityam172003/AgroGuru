@@ -21,9 +21,9 @@ const UserDetail = (props) => {
               <div id="user_mail">{props.email}</div>
         </div>
         <div id="user_avail">
-            <div  class="user_avl_it" id="nr"><span>Nursery</span></div>
-            <div class="user_avl_it" id="mr"><span>Market</span></div>
-            <div class="user_avl_it" id="lb"><span>Laboratory</span></div>
+            {props.nur && <div  class="user_avl_it" id="nr"><span>Nursery</span></div>}
+            {props.mar && <div class="user_avl_it" id="mr"><span>Market</span></div>}
+            {props.lab && <div class="user_avl_it" id="lb"><span>Laboratory</span></div>}
         </div>
         
     </div>

@@ -37,7 +37,7 @@ export const MainNavbar = () => {
             <li class="nav_menu_item"><NavLink className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             } to='/main'>Home</NavLink></li>
-            <li class="nav_menu_item" id="ser"><NavLink to='/services' className={({ isActive, isPending }) =>
+            <li class="nav_menu_item" id="ser"><NavLink to='/services/crop' className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }>Services</NavLink>
               <div id="services_dropdown">
