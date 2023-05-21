@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../Styles/profile_page_ui.css"
 
-const UserDetail = () => {
+const UserDetail = (props) => {
+   
+
   return (
     <><section id="profile_main">
     <div id="profile_pg_bg">
@@ -12,11 +14,11 @@ const UserDetail = () => {
     
     <div id="profile_user_info">
         <div id="profile_user_name">
-            <h2>Rakesh Sharma</h2>
+            <h2>{props.name}</h2>
         </div>
         <div id="profile_user_contact">
-              <div id="user_ph">1234567890</div>
-              <div id="user_mail">abc123@mail.com</div>
+              <div id="user_ph">{props.phone}</div>
+              <div id="user_mail">{props.email}</div>
         </div>
         <div id="user_avail">
             <div  class="user_avl_it" id="nr"><span>Nursery</span></div>

@@ -1,8 +1,12 @@
 import React from 'react'
 import '../Styles/footer_ui.css';
 import IonIcon from '@reacticons/ionicons';
+import { useNavigate } from 'react-router-dom';
 
 const FooterWeb = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <footer class="footer">
@@ -27,11 +31,11 @@ const FooterWeb = () => {
                     </a></li>
                 </ul>
                 <ul class="menu">
-                    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                    <li class="menu__item"><a class="menu__link" onClick={() => navigate('/main')}>Home</a></li>
+                    <li class=" "><a class="menu__link" onClick={() => navigate('/about')}>About</a></li>
+                    <li class="menu__item"><a class="menu__link" onClick={() => navigate('/services/crop')}>Services</a></li>
+                    <li class="menu__item"><a class="menu__link" onClick={() => navigate('/about')}>Team</a></li>
+                    <li class="menu__item"><a class="menu__link" >Contact</a></li>
 
                 </ul>
                 <p>&copy;2023 AgroGuru | All Rights Reserved</p>

@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 
 const Result = ({ crop }) => {
 
-
+  console.log(crop)
 
   const filtered = myList.filter(curr => {
     return curr.name === crop;

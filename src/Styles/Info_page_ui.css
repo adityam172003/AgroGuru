@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#info_page{
+    margin-top: 4.5rem;
+    width: 100%;
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#info_pg_top{
+  width: 100%;
+  height: 25rem;
+  /* height: 100%; */
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+#info_pg_top #weather_widget{
+    width: 50%;
+    height: 90%;
+    background: linear-gradient(180deg, #44BB0C 24.56%, rgba(245, 220, 0, 0.72) 73.44%);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+}
+#weather_cont{
+    width: 95%;
+    height: 50%;
+    position: relative;
+    top:10px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12rem;
+}
+#weather_cont #weather_loc{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    padding: 1rem 0 0 2rem;
+    color: white;
+
+}
+
+#weather_cont #weather_loc .city{
+  font-weight: 700;
+  font-size: 4rem;
+}
+#weather_cont #weather_loc .temp{
+    position: relative;
+    top: -1.7rem;
+    font-weight: 600;
+  font-size: 3.5rem;
+}
+#weather_cont #weather_loc .nature{
+    position: relative;
+    top: -2.8rem;
+    font-weight: 550;
+  font-size: 2rem;
+}
+#weather_cont #weather_logo{
+    width: 50%;
+    /* background-image: url('cloudy.png'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#weather_widget #weather_para{
+    position: relative;
+    top: 80px;
+    left: 30px;
+}
+#weather_widget #weather_para ul{
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#info_pg_top #info_crsl{
+    width: 50%;
+    height: 90%;
+    /* background-color: antiquewhite; */
+    background-image: url('../../public/assets/info_bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3rem;
+}
+#info_pg_top #info_crsl #info_crsl_cover{
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.4);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info_pg_top #info_crsl #info_crsl_cover p{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 3rem;
+    font-family: 'Bebas Neue';
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+#info_pg_cont{
+    width: 100%;
+    height: 80rem;
+    background-color: rgb(219, 219, 219);
+}
+#info_pg_cont #cont_heading{
+ width: 100%;
+ height: 5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#info_pg_cont #cont_heading h2{
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+#info_pg_gallery{
+    width: 100%;
+    height: 50rem;
+}

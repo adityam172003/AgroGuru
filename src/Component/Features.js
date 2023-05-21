@@ -6,8 +6,8 @@ const Features = ({title, body}) => {
     // const navigate = useNavigate();
 
     return (
-    <div className='feature-container'>
-       <div className='card-content'>
+    <div >
+       <div className='features_news_card'>
             <div className='card-title'>
                 <h3>{title}</h3>
             </div>
