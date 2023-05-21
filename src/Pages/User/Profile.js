@@ -20,9 +20,9 @@ export const Profile = () => {
   const nevigate = useNavigate();
   const [dat,setdat ] =useState({});
 
-  const [isNur, setIsNur] = useState();
-  const [isMar, setIsMar] = useState();
-  const [isLab, setIsLab] = useState();
+  const [isNur, setIsNur] = useState({});
+  const [isMar, setIsMar] = useState({});
+  const [isLab, setIsLab] = useState({});
 
 
   const isnursery =()=>{
@@ -34,13 +34,8 @@ export const Profile = () => {
     .catch((err)=>{
       setIsNur(false);
     })
-
-   
-
   }
 
-  
-  
   const islab =  ()=>{
     let status = 200
     axios.get('/lab/userlab')
@@ -51,16 +46,13 @@ export const Profile = () => {
       setIsLab(false);
     })
 
-
     if(status ==200)
     {
       setIsLab(true);
-      
     }
     else{
       setIsLab(false);
     }
-  
   }
   
   const ismarket =  ()=>{
@@ -72,8 +64,8 @@ export const Profile = () => {
     .catch((err)=>{
       setIsMar(false);
     })
-   
   }
+
   const getuser = ()=>{
      axios.get('/user/getuser')
     .then((res)=>{
@@ -84,16 +76,12 @@ export const Profile = () => {
        
         nevigate('/');
         alert("Please Login first");
-    })
-    
-
-       
+    })   
 }
 
 useEffect(()=>{
 
     getuser();
-
     isnursery();
     islab();
     ismarket();
@@ -104,7 +92,14 @@ useEffect(()=>{
     
     <>
     <MainNavbar />
-    <UserDetail name={dat.name} email={dat.email} phone = {dat.phone} />
+    <UserDetail 
+      name={dat.name} 
+      email={dat.email} 
+      phone = {dat.phone} 
+      nur = {isNur}
+      mar = {isMar}
+      lab = {isLab}
+    />
     {isNur ? <ProfileNurAv/> : <ProfileNurNa/>}
     {isMar ? <ProfileMarAv/> : <ProfileMarNa/>}
     {isLab ? <ProfileLabAv/> : <ProfileLabNa/>}
