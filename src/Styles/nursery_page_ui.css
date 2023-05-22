@@ -13,7 +13,7 @@
     font-family: 'poppins',sans-serif;
     margin-top: 6rem;
     overflow: hidden;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 
 }
 #nur_gallery{
@@ -21,12 +21,20 @@
    /* height: fit-content; */
    padding: 1.5rem;
    background-color: #79bd65;
-   display: grid;
-   grid-template-columns: 1fr;
-   row-gap: 1.5rem;
+   
+}
+#nur_gall_scr{
+    width: 100%;
+    display: grid;
+    height: 70rem;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-right: .5rem;
 }
 #nur_cart{
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -76,7 +84,7 @@
     width: 98%;
     height: 1rem;
     margin-top: 1rem;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
    color: white ;
    display: flex;
    justify-content: center;

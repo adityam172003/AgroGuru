@@ -48,6 +48,7 @@ export const Market = () => {
       <section id="mar_page">
        <section id="mar_gallery">
            <div id="mar_title">Markets in Pune</div>
+           <div id='mar_gall_scr'>
            {
             mars.map((it)=>(<div id="mar_cart">
                <div id="mar_img_n_cnt">
@@ -68,6 +69,7 @@ export const Market = () => {
                    </div>
                </div>
            </div>))}
+           </div>
        </section>
    </section>
     </>
