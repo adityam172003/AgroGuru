@@ -56,9 +56,9 @@ export const About = () => {
                     <p class="mem_work">Frontend UX Developer</p>
                     <p class="social_med">
                         <ul class="sc_med_ic">
-                            <li><a href="" class="li_link"></a></li>
-                            <li><a href="" class="in_link"></a></li>
-                            <li><a href="" class="fb_link"></a></li>
+                            <li><a href="https://www.linkedin.com/in/samarth-mali-19ab15225" class="li_link"></a></li>
+                            <li><a href="https://instagram.com/_sm1100_?igshid=MzNlNGNkZWQ4Mg==" class="in_link"></a></li>
+                            <li><a href="https://www.facebook.com/Samarth.Mali.1100?mibextid=ZbWKwL" class="fb_link"></a></li>
                         </ul>
                     </p>
                 </div>
@@ -84,8 +84,8 @@ export const About = () => {
                     <p class="social_med">
                         <ul class="sc_med_ic">
                             <li><a href="" class="li_link"></a></li>
-                            <li><a href="" class="in_link"></a></li>
-                            <li><a href="" class="fb_link"></a></li>
+                            <li><a href="https://instagram.com/rahul_patil_592?igshid=MzNlNGNkZWQ4Mg==" class="in_link"></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100014906802326&mibextid=ZbWKwL" class="fb_link"></a></li>
                         </ul>
                     </p>
                 </div>

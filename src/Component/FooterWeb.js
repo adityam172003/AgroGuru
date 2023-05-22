@@ -32,9 +32,9 @@ const FooterWeb = () => {
                 </ul>
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__link" onClick={() => navigate('/main')}>Home</a></li>
-                    <li class=" "><a class="menu__link" onClick={() => navigate('/about')}>About</a></li>
+                    {/* <li class="menu_items"><a class="menu__link" onClick={() => navigate('/about')}>About</a></li> */}
                     <li class="menu__item"><a class="menu__link" onClick={() => navigate('/services/crop')}>Services</a></li>
-                    <li class="menu__item"><a class="menu__link" onClick={() => navigate('/about')}>Team</a></li>
+                    <li class="menu__item"><a class="menu__link" onClick={() => navigate('/about')}>About</a></li>
                     <li class="menu__item"><a class="menu__link" >Contact</a></li>
 
                 </ul>

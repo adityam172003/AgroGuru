@@ -69,6 +69,7 @@ const Login = () => {
 
   return (
     <>
+    {spin && <Spinner />}
         <section id="login_page">
         <div id="login_page_wp"><div id="lgn_cover">
           <h2><span id="spn1">Agro</span ><span id="spn2" >Guru</span></h2>
@@ -104,7 +105,7 @@ const Login = () => {
           </div>
         </div>
       </section>
-      {spin && <Spinner />}
+      
 
     </>
   );
