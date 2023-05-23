@@ -27,7 +27,8 @@ const UserDetail = (props) => {
         </div>
         
     </div>
-    <div id="profile_dp"></div>
+    {/* MAKE BELOW PROFILE IMAGE DYNAMIC */}
+    <img id="profile_dp" src='/assets/user.png' alt='profile-img'/>
 </section></>
   )
 }

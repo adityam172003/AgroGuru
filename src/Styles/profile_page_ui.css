@@ -33,7 +33,7 @@
     left: 70px;
     width: 15rem;
     height: 15rem;
-     background-image: url('../../public/assets/user.png');
+     /* background-image: url('../../public/assets/user.png'); */
      background-repeat: no-repeat;
      background-size: cover;
     border-radius: 500px;
