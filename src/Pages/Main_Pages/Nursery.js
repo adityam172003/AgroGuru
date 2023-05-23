@@ -62,7 +62,9 @@ const [nurs,setnurs] = useState([])
        </div>
   
        <section id="nur_gallery">
-           <div id="nur_title">Plant Nurseries in Pune</div>
+       <div id="nur_title">Plant Nurseries in Pune</div>
+        <div id='nur_gall_scr'>
+           
            {
             nurs.map((it)=>(<div id="nur_cart">
                <div id="nur_img_n_cnt">
@@ -138,7 +140,7 @@ const [nurs,setnurs] = useState([])
 
            </div>} */}
 
-
+        </div>
        </section>
    </section>
     {/* <div>Nursery</div>

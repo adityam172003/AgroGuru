@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 #profile_pg{
+    overflow: hidden;
     margin-top: 4.5rem;
     width: 100%;
     /* height: 80rem; */
     /* background-color: antiquewhite; */
    font-family: 'poppins',sans-serif;
+   /* margin-bottom: 5rem; */
 }
 
 #profile_main{
@@ -379,4 +381,7 @@ color: white;
 
 #sec6 .profile_sec_avail_text{
     padding-top: 8rem;
+}
+#sec5,#sec6{
+    margin-bottom: 2rem;
 }
