@@ -67,7 +67,7 @@ const LaboratoryForm = () => {
     const onSubmit =async (data) => {
      
       
-        let axiosConfig;
+      let axiosConfig;
       
        
       navigator.geolocation.getCurrentPosition( async function(position) {

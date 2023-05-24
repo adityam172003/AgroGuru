@@ -5,11 +5,12 @@ import Weather from '../../Component/Weather'
 // import weather from '../../static/weather-lottie.json' 
 import News from '../../Component/News'
 import "../../Styles/Info_page_ui.css"
+import MapRoute from '../../Component/MapRoute'
 
 const Info = () => {
   return (
     <div className='info'>
-      <section id='info_page'>
+      {/* <section id='info_page'>
         <section id="info_pg_top">
         <Weather />
           <div id="info_crsl">
@@ -21,7 +22,9 @@ const Info = () => {
           
         </section>
         <News />
-      </section>
+      </section> */}
+
+      <MapRoute />
     </div>
   )
 }

@@ -69,15 +69,16 @@ const NurseryForm = () => {
       console.log(data)
         let axiosConfig;
       
+        navigator.geolocation.getCurrentPosition( async function(position) {
        
-      navigator.geolocation.getCurrentPosition( async function(position) {
        
-       
-          setlgt(position.coords.longitude);
-      
-          setlgn(position.coords.latitude);
+            setlgt(position.coords.longitude);
         
-      })
+            setlgn(position.coords.latitude);
+
+            
+        })
+      
       
       bodyFormData.append('nurseryImage',nurseryImage)
       bodyFormData.append('name',data.name)

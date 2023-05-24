@@ -26,6 +26,7 @@ import DemoLab from '../Pages/Forms/DemoLab';
 
 import Info from "../Pages/Main_Pages/Info";
 import Services from "../Layout/Services";
+import RouteMap from "../Component/MapRoute";
 
 // creating react-routers 
 const router = createBrowserRouter(
@@ -58,6 +59,9 @@ const router = createBrowserRouter(
           <Route path="lab"   element={<Laboratory/>}/>
           <Route path="info"   element={<Info />}/>
         </Route>
+        
+        <Route path="/map/:ltd/:lgt" element={<RouteMap/>}/>
+        
       </Route>
 
     
