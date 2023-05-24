@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -31,22 +31,23 @@ const MarketForm = () => {
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: yupResolver(schema)
     });
-
+    useEffect(()=>{
+        navigator.geolocation.getCurrentPosition( async function(position) {
+       
+       
+            setlgt(position.coords.longitude);
+        
+            setlgn(position.coords.latitude);
+          
+        })
+      },[])
     const onSubmit =async (data) => {
      
         console.log(data);
         let axiosConfig;
       
        
-      navigator.geolocation.getCurrentPosition( async function(position) {
-       
-       
-          setlgt(position.coords.longitude);
-      
-          setlgn(position.coords.latitude);
-        
-      })
-      
+   
       bodyFormData.append('marketImage',marketImage)
       bodyFormData.append('name',data.name)
       bodyFormData.append('phone',data.phone)
