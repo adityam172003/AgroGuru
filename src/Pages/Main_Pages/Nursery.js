@@ -17,6 +17,7 @@ const [nurs,setnurs] = useState([])
   const [lgn ,setlgn] = useState(0.0);
 
 
+ useEffect(()=>{
   navigator.geolocation.getCurrentPosition( async function(position) {
        
        
@@ -24,8 +25,9 @@ const [nurs,setnurs] = useState([])
 
     setlgn(position.coords.latitude);
   
-})
+},[])
 
+ })
 
 
 
@@ -40,7 +42,7 @@ const [nurs,setnurs] = useState([])
      
       const data=dat.data;
       setnurs(data);
-      console.log(nurs)
+     console.log(dat);
       
 
     })
@@ -52,7 +54,7 @@ const [nurs,setnurs] = useState([])
   useEffect(()=>{
     getNursery();
   },[]) 
-  // console.log(data)
+
   return (
    <>
    <section id="nur_page">
@@ -63,10 +65,11 @@ const [nurs,setnurs] = useState([])
   
        <section id="nur_gallery">
        <div id="nur_title">Plant Nurseries in Pune</div>
-        <div id='nur_gall_scr'>
+      <div id='nur_gall_scr'>
            
            {
-            nurs.map((it)=>(<div id="nur_cart">
+            nurs.map((it)=>(
+            <div id="nur_cart">
                <div id="nur_img_n_cnt">
                    <div id="img_dv"><img src={`https://agroguru.onrender.com/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
                    <div>
@@ -98,7 +101,9 @@ const [nurs,setnurs] = useState([])
                 
             </Carousel>
                </div>
-           </div>))}
+           </div>))
+           
+           }
 
         {/* <----------------------- Static Nursery Code below for CSS Styling -------------------> */}
 
