@@ -63,21 +63,24 @@ const LaboratoryForm = () => {
 
         e.target.reset();
     }
+    useEffect(()=>{
+        navigator.geolocation.getCurrentPosition( async function(position) {
+       
+       
+            setlgt(position.coords.longitude);
+        
+            setlgn(position.coords.latitude);
+          
+        })
+      },[])
 
     const onSubmit =async (data) => {
      
       
-        let axiosConfig;
+      let axiosConfig;
       
        
-      navigator.geolocation.getCurrentPosition( async function(position) {
-       
-       
-          setlgt(position.coords.longitude);
-      
-          setlgn(position.coords.latitude);
-        
-      })
+   
       
       bodyFormData.append('laboratoryImage',laboratoryImage)
       bodyFormData.append('name',data.name)

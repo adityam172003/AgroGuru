@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -10,6 +10,9 @@ import { MainContext } from "../../context/agroguru_context";
 import Spinner from "../../Component/Spinner";
 
 const Login = () => {
+
+  const [lgt ,setlgt] = useState(0.0);
+    const [lgn ,setlgn] = useState(0.0);
   const { spin,setSpin } = useContext(MainContext);
   const nevigate = useNavigate();
   const schema = yup.object().shape({
@@ -27,30 +30,36 @@ const Login = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  useEffect(()=>{
+    
+    navigator.geolocation.getCurrentPosition( async function(position) { 
+      setlgt(position.coords.longitude);
+      setlgn(position.coords.latitude);
+    })
+  
 
+    },[]) 
   const onSubmit = async (data) => {
+    console.log(lgn,"---",lgt);
     setSpin(true);
     let axiosConfig = {
       headers: {
         "Content-Type": "application/json;charset=UTF-8",
         "Access-Control-Allow-Origin": "*",
       },
+      params:{
+        lng:JSON.stringify(lgn),
+        lat:JSON.stringify(lgt)
+      }
     };
-    let Locate = {
-      longit: "",
-      latit: "",
-    };
+   
 
     let status = 200;
 
-    navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("Latitude is :", position.coords.latitude);
-
-      console.log("Longitude is :", position.coords.longitude);
-    });
-
+  
+    
     await axios
-      .post("/user/login", { data, Locate }, axiosConfig)
+      .post("/user/login", { data} , axiosConfig)
       .then((dat) => {
         // alert("logged in");
         setSpin(false);
@@ -65,6 +74,7 @@ const Login = () => {
       alert("register first");
       nevigate("/regi");
     }
+    
   };
 
   return (
