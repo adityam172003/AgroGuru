@@ -35,7 +35,7 @@ const FooterWeb = () => {
                     {/* <li class="menu_items"><a class="menu__link" onClick={() => navigate('/about')}>About</a></li> */}
                     <li class="menu__item"><a class="menu__link" onClick={() => navigate('/services/crop')}>Services</a></li>
                     <li class="menu__item"><a class="menu__link" onClick={() => navigate('/about')}>About</a></li>
-                    <li class="menu__item"><a class="menu__link" >Contact</a></li>
+                    <li class="menu__item"><a href="https://forms.gle/7atD2nHBrBBnSTtL7" class="menu__link" target='blank'>feedback</a></li>
 
                 </ul>
                 <p>&copy;2023 AgroGuru | All Rights Reserved</p>
