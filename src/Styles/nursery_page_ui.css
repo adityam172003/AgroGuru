@@ -28,7 +28,7 @@
     display: grid;
     height: 70rem;
     grid-template-columns: 1fr;
-    row-gap: 1.5rem;
+    /* row-gap: -2rem; */
     overflow: scroll;
     overflow-x: hidden;
     padding-right: .5rem;
@@ -40,6 +40,7 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0 10px -3px;
+    height: 19rem;
 }
 #nur_pg_phone{
     padding-top: 2rem;
