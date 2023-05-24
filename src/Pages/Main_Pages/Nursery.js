@@ -68,7 +68,8 @@ const [nurs,setnurs] = useState([])
         <div id='nur_gall_scr'>
            
            {
-            nurs.map((it)=>(<div id="nur_cart">
+            nurs.map((it)=>(
+            <div id="nur_cart">
                <div id="nur_img_n_cnt">
                    <div id="img_dv"><img src={`https://agroguru.onrender.com/uploads/${it.nurseryImage}`} alt="" width="300px" height="250px"/></div>
                    <div>
