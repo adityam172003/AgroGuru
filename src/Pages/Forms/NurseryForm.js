@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -63,22 +63,24 @@ const NurseryForm = () => {
 
         e.target.reset();
     }
-
-    const onSubmit =async (data) => {
-     
-      console.log(data)
-        let axiosConfig;
-      
+    useEffect(()=>{
         navigator.geolocation.getCurrentPosition( async function(position) {
        
        
             setlgt(position.coords.longitude);
         
             setlgn(position.coords.latitude);
-
-            
+          
         })
+      },[])
+
+    const onSubmit =async (data) => {
+     
+      console.log(data)
+        let axiosConfig;
       
+       
+   
       
       bodyFormData.append('nurseryImage',nurseryImage)
       bodyFormData.append('name',data.name)
