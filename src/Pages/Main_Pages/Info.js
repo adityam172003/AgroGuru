@@ -10,7 +10,7 @@ import MapRoute from '../../Component/MapRoute'
 const Info = () => {
   return (
     <div className='info'>
-      {/* <section id='info_page'>
+      <section id='info_page'>
         <section id="info_pg_top">
         <Weather />
           <div id="info_crsl">
@@ -22,9 +22,7 @@ const Info = () => {
           
         </section>
         <News />
-      </section> */}
-
-      <MapRoute />
+      </section>
     </div>
   )
 }
