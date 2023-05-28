@@ -79,19 +79,19 @@ function CropPredict() {
           <form >
             <div className='form1' >
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Nitrogen:e.target.value})}} type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Nitrogen:e.target.value})}} type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter Nitrogen(0-140)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Phosporus:e.target.value})}}type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Phosporus:e.target.value})}}type="number" id="Phosporus" name="Phosporus" placeholder="Enter Phosphorus(0-150)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Potassium:e.target.value})}}  type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Potassium:e.target.value})}}  type="number" id="Potassium" name="Potassium" placeholder="Enter Potassium(0-210)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Temperature:e.target.value})}} type="number" id="Temperature" name="Temperature" placeholder="Enter Temperature" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Temperature:e.target.value})}} type="number" id="Temperature" name="Temperature" placeholder="Enter Temperature(9-50)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Humidity:e.target.value})}} type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Humidity:e.target.value})}} type="number" id="Humidity" name="Humidity" placeholder="Enter Humidity(14-100)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,pH:e.target.value})}} type="number" id="pH" name="pH" placeholder="Enter pH" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,pH:e.target.value})}} type="number" id="pH" name="pH" placeholder="Enter pH(3-10)" /></div>
 
-              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Rainfall:e.target.value})}} type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall" /></div>
+              <div className='crop_pred_att'><input onChange={(e)=>{setvals({...vals,Rainfall:e.target.value})}} type="number" id="Rainfall" name="Rainfall" placeholder="Enter Rainfall(20-300)" /></div>
               <div className='crop_pred_att'><button  onClick={(e) => {
                     e.preventDefault();
                     console.log(vals)
