@@ -12,24 +12,18 @@ function Weather() {
   const [lgt, setlgt] = useState(0.0);
  const [lgn, setlgn] = useState(0.0);
 
-
- 
-
- 
-
   useEffect(() => {
+    window.navigator.geolocation.getCurrentPosition( async function(position) {
+ 
 
-    
-    navigator.geolocation.getCurrentPosition( async function(position) {
-       
-       
       setlgt(position.coords.longitude);
   
       setlgn(position.coords.latitude);
     
   })
+  
 
-  console.log(lgn," ",lgt);
+  console.log(lgn," <---> ",lgt);
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lgn}&lon=${lgt}&units=metric&appid=${`839fdcea2a3f4c91ec2a32a9bb34f461`}`
 
 
@@ -37,7 +31,13 @@ function Weather() {
       setData(response.data)
       console.log(response.data)
     })
-  }, [])
+    .catch((e)=>{
+      console.log(e)
+    })
+    
+  },[])
+
+  
   // console.log(data);
   return (
     // <div className="weather">
