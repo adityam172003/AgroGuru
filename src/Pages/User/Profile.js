@@ -70,6 +70,7 @@ export const Profile = () => {
      axios.get('/user/getuser')
     .then((res)=>{
        setdat(res.data);
+      
        
     })
     .catch(()=>{
@@ -92,6 +93,7 @@ useEffect(()=>{
     
     <>
     <MainNavbar />
+   
     <UserDetail 
       name={dat.name} 
       email={dat.email} 
@@ -99,12 +101,18 @@ useEffect(()=>{
       nur = {isNur}
       mar = {isMar}
       lab = {isLab}
+      profilpic ={dat.profilpic}
     />
+
+    
     {isNur ? <ProfileNurAv nursery={isNur}/> : <ProfileNurNa/>}
     {isMar ? <ProfileMarAv market = {isMar}/> : <ProfileMarNa/>}
     {isLab ? <ProfileLabAv lab ={isLab}/> : <ProfileLabNa/>}
+  
     <FooterWeb/>
+
     <Outlet/>
+   
     </>
   )
 }

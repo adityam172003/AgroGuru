@@ -54,7 +54,9 @@
 
 #weather_cont #weather_loc .city{
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2rem;
+  
+ 
 }
 #weather_cont #weather_loc .temp{
     position: relative;

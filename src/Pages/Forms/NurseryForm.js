@@ -34,8 +34,7 @@ const NurseryForm = () => {
 
     const imageSubmitHandle = async (e) => {
         e.preventDefault();
-        console.log()
-        console.log()
+    
         // const itemName = e.target.value.itemName;
         // const itemImage = e.target.value.itemImage;
         // setImageForm({itemName, itemImage});

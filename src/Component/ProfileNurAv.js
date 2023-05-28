@@ -3,11 +3,41 @@ import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
-
+import axios from 'axios'
+var bodyFormData = new FormData();
 
 const ProfileNurAv = ({nursery}) => {
     const [nur,setNur] = useState(nursery) ;
-         
+    const [nurName,setnurName]=useState("");
+    const [photo,setphoto]     = useState('');
+
+    const setImage  = ()=>
+    {
+        console.log(nurName);
+        console.log(photo);
+        bodyFormData.append('name',nurName);
+        bodyFormData.append('photo',photo);
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "multipart/form-data",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+        axios.post('/nursery/itemadd',bodyFormData,axiosConfig,)
+        .then((res)=>{
+            alert("item added successfully");
+
+
+        })
+        .catch((er)=>{
+            console.log(er);
+        })
+        console.log(photo)
+    }
+ 
            
           
         console.log(nursery);
@@ -29,6 +59,25 @@ const ProfileNurAv = ({nursery}) => {
 
     const onSubmit = (data) => {
         console.log(data);
+
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+
+
+        axios.patch('/nursery/nurseryup',data,axiosConfig)
+        .then((e)=>{
+            alert("nursery  updated ");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
     }
 
   return (
@@ -55,12 +104,19 @@ const ProfileNurAv = ({nursery}) => {
         <p class="it_add_text">Add New Items</p>
         <form class="profile_edit_add_it" action="">
             <div class="it_nm">
-                <label for="">Item Name</label><br/><input type="text"/>
+                <label for="">Item Name</label><br/>< input onChange={(e)=>{
+                    setnurName(e.target.value)
+                }} type="text"/>
             </div>
             <div class="it_second">
-                <label for="">Item Image</label><br/><input type="file"/>
+                <label for="">Item Image</label><br/><input onChange={(e)=>{
+                    setphoto(e.target.files[0]);
+                }} type="file"/>
             </div>
-            <div class="it_submit"><button>submit</button></div>
+            <div class="it_submit"><button onClick={(e)=>{
+                e.preventDefault();
+                setImage();
+            }} >submit</button></div>
         </form>
        </div>
     </div>

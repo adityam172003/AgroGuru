@@ -51,7 +51,7 @@ const LaboratoryForm = () => {
             }
             
           }
-        await axios.post('/laboratory/itemadd',itemFormData,axiosConfig)
+        await axios.post('/lab/itemadd',itemFormData,axiosConfig)
         .then((it)=>{
             console.log("item added");
 
@@ -90,23 +90,23 @@ const LaboratoryForm = () => {
       bodyFormData.append('closeTime',data.closeTime    )
 
       axiosConfig = {
-        params: {
-          lng:JSON.stringify(lgn),
-          ltd:JSON.stringify(lgt)
-        },
+       
         
         headers: {
             'Content-Type': "multipart/form-data",
             "Access-Control-Allow-Origin": "*",
         }
-        
+        , params: {
+            lng:JSON.stringify(lgn),
+            ltd:JSON.stringify(lgt)
+          }
       }
      
       let status=200;
           
    
 
-      await axios.post('/laboratory/register' , bodyFormData ,axiosConfig)
+       axios.post('/lab/register' , bodyFormData ,axiosConfig)
       .then(dat=>{
         
         // use state to set form
@@ -117,7 +117,7 @@ const LaboratoryForm = () => {
        .catch(err=>{
         
         
-         status= (err.response.status);
+         console.log(err);
         
      
         })

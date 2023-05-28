@@ -3,12 +3,39 @@ import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
+import axios from 'axios'
+
 
 
 const ProfileMarAv = ({market}) => {
 
+
+
     const [toggle, setToggle] = useState(true)
-   
+   const [item,setitem] = useState('')
+   const [price,setprice] = useState('');
+
+    const setitems = ()=>{
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+
+
+        axios.post('/market/additems',{item,price},axiosConfig)
+        .then((e)=>{
+            alert("item added");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
+
 
     const schema = yup.object().shape({
         name: yup.string(),
@@ -23,6 +50,25 @@ const ProfileMarAv = ({market}) => {
 
     const onSubmit = (data) => {
         console.log(data);
+
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+
+
+        axios.patch('/market/marketup',data,axiosConfig)
+        .then((e)=>{
+            alert("nursery  updated ");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
      
     }
 
@@ -51,12 +97,16 @@ const ProfileMarAv = ({market}) => {
             <p class="it_add_text">Add New Items</p>
             <form class="profile_edit_add_it" action="">
                 <div class="it_nm">
-                    <label for="">Item Name</label><br/><input type="text"/>
+                    <label for="">Item Name</label><br/><input onChange={(e)=>{setitem(e.target.value)}} type="text"/>
                 </div>
                 <div class="it_second">
-                    <label for="">Item Price</label><br/><input type="text"/>
+                    <label for="">Item Price</label><br/><input onChange={(e)=>{setprice(e.target.value)
+                    }} type="text"/>
                 </div>
-                <div class="it_submit"><button>submit</button></div>
+                <div class="it_submit"><button onClick={(e)=>{
+                    e.preventDefault();
+                    setitems();
+                }}>submit</button></div>
             </form>
            </div>
         </div>

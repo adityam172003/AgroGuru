@@ -5,10 +5,12 @@ import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
 import axios from 'axios'
 
-var itemFormData = new FormData();
+
+var bodyFormData = new FormData();
 
 const ProfileLabAv = ({lab}) => {
-
+    const [sname,setName]=useState("");
+    const [photo,setphoto]     = useState('');
     const schema = yup.object().shape({
         name: yup.string(),
         address: yup.string(),
@@ -20,8 +22,57 @@ const ProfileLabAv = ({lab}) => {
         resolver: yupResolver(schema)
     });
 
+
+    
+    const setImage  = ()=>
+    {
+       
+        bodyFormData.append('sname',sname);
+        bodyFormData.append('photo',photo);
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "multipart/form-data",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+        axios.post('/lab/itemadd',bodyFormData,axiosConfig,)
+        .then((res)=>{
+            alert("item added successfully");
+
+
+        })
+        .catch((er)=>{
+            console.log(er);
+        })
+        
+    }
+
+
+
+
+
     const onSubmit = (data) => {
-        console.log(data);
+        const  axiosConfig = {
+          
+            
+            headers: {
+                'Content-Type': "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
+            
+          }
+
+
+        axios.patch('/lab/labup',data,axiosConfig)
+        .then((e)=>{
+            alert(" lab updated ");
+        })
+        .catch(err=>{
+            console.log(err);
+        })
     }
 
     const imageSubmitHandle = async (e) => {
@@ -83,14 +134,21 @@ const ProfileLabAv = ({lab}) => {
                         <div class="it_submit"><button>submit</button></div> */}
                             <div className='it_nm'>
                             <label>Item Name</label>
-                                <input type="text" name='itemName'/>
+                                <input onChange={(e)=>{
+                                    setName(e.target.value);
+                                }} type="text" name='itemName'/>
                             </div>
                             <div className="it_second">
                             <label>Item Images</label>
-                                <input type="file" name='itemImage'/>
+                                <input onChange={(e)=>{
+                                    setphoto(e.target.files[0])
+                                }} type="file" name='itemImage'/>
                             </div>
                             <div className="it_submit">
-                                <button id="lab_form_item_sub"  type='submit'>submit</button>
+                                <button id="lab_form_item_sub"  onClick={(e)=>{
+                                    e.preventDefault();
+                                    setImage();
+                                }} type='submit'>submit</button>
                             </div>
                         </form>
                     </div>

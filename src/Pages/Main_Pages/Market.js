@@ -4,7 +4,7 @@ import marketlogo from '../../static/market-lottie.json'
 import Lottie from '../../Component/Lottie'
 import axios from 'axios';
 import '../../Styles/MarketPage.css'
-
+import { Link } from 'react-router-dom';
 
 <link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
 
@@ -58,7 +58,9 @@ export const Market = () => {
                        <p id="mar_addr">{it.address}</p>
                        <div id="mar_pg_phone">
                            <div class="but" id="mar_phone">{it.phone}</div>
-                           <button class="but" id="mar_map">map</button>
+                           <div class="but">
+                              <Link to={`/map/${it.geometry.coordinates[0]}/${it.geometry.coordinates[1]}`} id="nur_map">map</Link>
+                           </div>
                        </div>
                    </div>
                    <div id='mar_item_array'>  

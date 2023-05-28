@@ -99,6 +99,7 @@ const [nurs,setnurs] = useState([])
                     <span className='itemname'>{i.itemname}</span>
                 </div>
               </>
+
             )):'/'
            
            }

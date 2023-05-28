@@ -50,7 +50,7 @@ const LaboratoryForm = () => {
                 "Access-Control-Allow-Origin": "*",
             }
           }
-        await axios.post('/laboratory/itemadd',itemFormData,axiosConfig)
+        await axios.post('/lab/itemadd',itemFormData,axiosConfig)
         .then((it)=>{
             console.log("item added");
 
@@ -97,7 +97,7 @@ const LaboratoryForm = () => {
       }
      
       let status=200;       
-      await axios.post('/laboratory/register' , bodyFormData ,axiosConfig)
+      await axios.post('/lab/register' , bodyFormData ,axiosConfig)
       .then(dat=>{
         // use state to set form
         })
