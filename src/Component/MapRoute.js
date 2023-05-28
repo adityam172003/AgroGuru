@@ -63,7 +63,7 @@ const RouteMap = () => {
 
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <MapContainer center={[START_LAT, START_LNG]} zoom={12} scrollWheelZoom={false} style={{ width: '100%', height: '100%' }}>
+      <MapContainer center={[18.5204, 73.8567]} zoom={12} scrollWheelZoom={false} style={{ width: '100%', height: '100%' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={[START_LAT, START_LNG]} icon={customIcon}>
           <Popup>Start Marker</Popup>

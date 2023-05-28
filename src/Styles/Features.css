@@ -91,11 +91,7 @@
     width: 28rem;
     box-shadow: 0 0 15px -4px;
     border-radius: 1rem;
-    transition: all ease-in-out .5s;
   
-}
-.features_news_card:hover{
-    transform: scale(1.05);
 }
 .card-title{
     width: 100%;
