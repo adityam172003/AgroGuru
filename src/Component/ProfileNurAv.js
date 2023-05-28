@@ -37,15 +37,15 @@ const ProfileNurAv = ({nursery}) => {
        <div class="profile_sec_avail_text">Update Your Nursery </div>
        <div class="profile_info_edit">
         <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
-            <input type='text'  name='name' placeholder='name ' {...register('name')} />
-            <input type='text' name='address' placeholder='Address ' {...register('address')}/>
-            <input type='text' name='phone' placeholder='Enter Contact-Number ' {...register("phone")}/>
-            <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
+            <input type='text'  name='name' placeholder={nursery.name} {...register('name')} />
+            <input type='text' name='address' placeholder={nursery.address} {...register('address')}/>
+            <input type='text' name='phone' placeholder={nursery.phone}  {...register("phone")}/>
+            <input type='text' name='offday' placeholder="sunday"  {...register("offDay")}/>
             <div class="tms">
-             <div class="st_tm">Open :  8:00</div>
-            <div class="cl_tm">Close :  5:00</div>
+             {/* <div class="st_tm">Open : </div> */}
+            {/* <div class="cl_tm">Close : </div> */}
             </div>
-            <div class="eml">Email : rahul@mail.com</div>
+           
             <div class="profile_edit_submit">
                 <button   >Update</button>
             </div>

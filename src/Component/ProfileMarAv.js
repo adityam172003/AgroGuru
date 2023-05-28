@@ -5,9 +5,10 @@ import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
 
 
-const ProfileMarAv = () => {
+const ProfileMarAv = ({market}) => {
 
     const [toggle, setToggle] = useState(true)
+   
 
     const schema = yup.object().shape({
         name: yup.string(),
@@ -22,6 +23,7 @@ const ProfileMarAv = () => {
 
     const onSubmit = (data) => {
         console.log(data);
+     
     }
 
   return (
@@ -31,15 +33,15 @@ const ProfileMarAv = () => {
         <div class="profile_sec_avail_text">Update Market Info</div>
         <div class="profile_info_edit">
             <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
-            <input type='text' name='name' placeholder={`Name : Hello`} {...register("name")}/>
-            <input type='text' name='address' placeholder='Address ' {...register('address')}/>
-            <input type='text' name='phone' placeholder='Enter Contact-Number ' {...register("phone")}/>
-            <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
+            <input type='text' name='name' placeholder={`Name : ${market.name}`} {...register("name")}/>
+            <input type='text' name='address' placeholder={market.address} {...register('address')}/>
+            <input type='text' name='phone' placeholder={market.phone} {...register("phone")}/>
+            <input type='text' name='offday' placeholder='sunday' {...register("offDay")}/>
             <div class="tms">
-                <div class="st_tm">Open :  8:00</div>
-                <div class="cl_tm">Close :  5:00</div>
+                {/* <div class="st_tm">Open :  8:00</div>
+                <div class="cl_tm">Close :  5:00</div> */}
             </div>
-            <div class="eml">Email : rahul@mail.com</div>
+            {/* <div class="eml">Email : </div> */}
             <div class="profile_edit_submit">
                 <button>Update</button>
             </div>

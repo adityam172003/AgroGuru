@@ -7,7 +7,7 @@ import axios from 'axios'
 
 var itemFormData = new FormData();
 
-const ProfileLabAv = () => {
+const ProfileLabAv = ({lab}) => {
 
     const schema = yup.object().shape({
         name: yup.string(),
@@ -57,15 +57,15 @@ const ProfileLabAv = () => {
                 <div class="profile_sec_avail_text">Update Lab</div>
                 <div class="profile_info_edit">
                     <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
-                    <input type='text' name='name' placeholder={`Name : Hello`} {...register("name")}/>
-                    <input type='text' name='address' placeholder='Address of Laboratory' {...register('address')}/>
-                    <input type='text' name='phone' placeholder='Enter Contact-Number of Laboratory' {...register("phone")}/>
-                    <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
+                    <input type='text' name='name' placeholder={`Name : ${lab.name}`} {...register("name")}/>
+                    <input type='text' name='address' placeholder={lab.address} {...register('address')}/>
+                    <input type='text' name='phone' placeholder={lab.phone} {...register("phone")}/>
+                    <input type='text' name='offday' placeholder='sunday' {...register("offDay")}/>
                         <div class="tms">
-                        <div class="st_tm">Open :  8:00</div>
-                        <div class="cl_tm">Close :  5:00</div>
+                        {/* <div class="st_tm">Open :  8:00</div>
+                        <div class="cl_tm">Close :  5:00</div> */}
                         </div>
-                        <div class="eml">Email : rahul@mail.com</div>
+                        {/* <div class="eml">Email : rahul@mail.com</div> */}
                         <div class="profile_edit_submit">
                             <button>Update</button>
                         </div>
@@ -90,7 +90,7 @@ const ProfileLabAv = () => {
                                 <input type="file" name='itemImage'/>
                             </div>
                             <div className="it_submit">
-                                <button id="lab_form_item_sub" type='submit'>submit</button>
+                                <button id="lab_form_item_sub"  type='submit'>submit</button>
                             </div>
                         </form>
                     </div>
