@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import "../Styles/profile_page_ui.css"
 
 
-const ProfileNurAv = () => {
-    const [toggle, setToggle] = useState(true)
+const ProfileNurAv = ({nursery}) => {
+    const [nur,setNur] = useState(nursery) ;
+         
+           
+          
+        console.log(nursery);
+          console.log(nur);
+        const [toggle, setToggle] = useState(true) ;
 
     const schema = yup.object().shape({
         name: yup.string(),
@@ -19,6 +25,8 @@ const ProfileNurAv = () => {
         resolver: yupResolver(schema)
     });
 
+
+
     const onSubmit = (data) => {
         console.log(data);
     }
@@ -29,7 +37,7 @@ const ProfileNurAv = () => {
        <div class="profile_sec_avail_text">Update Your Nursery </div>
        <div class="profile_info_edit">
         <form class="frms" action="" onSubmit={handleSubmit(onSubmit)}>
-            <input type='text' name='name' placeholder={`Name : Hello`} {...register("name")}/>
+            <input type='text'  name='name' placeholder='name ' {...register('name')} />
             <input type='text' name='address' placeholder='Address ' {...register('address')}/>
             <input type='text' name='phone' placeholder='Enter Contact-Number ' {...register("phone")}/>
             <input type='text' name='offday' placeholder='Enter your Off-Day' {...register("offDay")}/>
@@ -39,7 +47,7 @@ const ProfileNurAv = () => {
             </div>
             <div class="eml">Email : rahul@mail.com</div>
             <div class="profile_edit_submit">
-                <button>Update</button>
+                <button   >Update</button>
             </div>
             </form>
        </div>

@@ -8,6 +8,7 @@ import { Carousel } from 'react-responsive-carousel';
 import NurseryImages from '../../NurseryImages';
 import Slider from '../../Component/Slider';
 import MapRoute from '../../Component/MapRoute';
+import { Link } from 'react-router-dom';
 
 
 <link rel="stylesheet" href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"/>
@@ -25,10 +26,9 @@ const [nurs,setnurs] = useState([])
 
     setlgn(position.coords.latitude);
   
-},[])
+})
 
- })
-
+ },[])
 
 
   const getNursery = async()=>{
@@ -43,6 +43,8 @@ const [nurs,setnurs] = useState([])
       const data=dat.data;
       setnurs(data);
      console.log(dat);
+      console.log(data)
+      console.log(nurs)
       
 
     })
@@ -54,7 +56,7 @@ const [nurs,setnurs] = useState([])
   useEffect(()=>{
     getNursery();
   },[]) 
-
+  
   return (
    <>
    <section id="nur_page">
@@ -81,7 +83,9 @@ const [nurs,setnurs] = useState([])
                        </div>
                        <div id="nur_pg_phone">
                            <div class="but" id="nur_phone">{it.phone}</div>
-                           <button class="but" id="nur_map">map</button>
+                           <div class="but">
+                              <Link to={`/map/${it.geometry.coordinates[0]}/${it.geometry.coordinates[1]}`} id="nur_map">map</Link>
+                           </div>
                        </div>
                    </div>
                </div>

@@ -77,7 +77,7 @@ const LaboratoryForm = () => {
     const onSubmit =async (data) => {
      
       
-        let axiosConfig;
+      let axiosConfig;
       
        
    

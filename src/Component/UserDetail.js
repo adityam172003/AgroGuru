@@ -28,7 +28,11 @@ const UserDetail = (props) => {
         
     </div>
     {/* MAKE BELOW PROFILE IMAGE DYNAMIC */}
-    <img id="profile_dp" src='/assets/user.png' alt='profile-img'/>
+    <img id="profile_dp" src='/assets/user.png' alt='profile-img' onClick={()=>{
+        console.log('clicked');
+      
+    }} />
+    
 </section></>
   )
 }

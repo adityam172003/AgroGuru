@@ -178,3 +178,11 @@
     width: 100%;
     height: 100%;
 }
+
+.but{
+    text-align: center;
+}
+.but a{
+    text-decoration: none;
+    color: white;
+}

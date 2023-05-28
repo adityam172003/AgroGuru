@@ -100,7 +100,7 @@ useEffect(()=>{
       mar = {isMar}
       lab = {isLab}
     />
-    {isNur ? <ProfileNurAv/> : <ProfileNurNa/>}
+    {isNur ? <ProfileNurAv nursery={isNur}/> : <ProfileNurNa/>}
     {isMar ? <ProfileMarAv/> : <ProfileMarNa/>}
     {isLab ? <ProfileLabAv/> : <ProfileLabNa/>}
     <FooterWeb/>
