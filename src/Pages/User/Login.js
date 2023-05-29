@@ -22,7 +22,6 @@ const Login = () => {
       .required("Email is required"),
     password: yup.string().min(4).max(20).required("Password is must"),
   });
-
   const {
     register,
     handleSubmit,
