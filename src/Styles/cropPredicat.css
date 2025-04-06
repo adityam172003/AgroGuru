@@ -5,7 +5,7 @@
 #crop_predict_pag{
     width: 100%;
     margin-top: 4.5rem;
-
+    padding-bottom: 8rem;
 }
 #maintext{
     display: flex;
@@ -25,7 +25,7 @@
  display: flex;
  gap: 0;
  /* background-color: aqua; */
- margin-bottom: 10rem;
+ padding-bottom: 2rem;
  overflow: hidden;
  /* background-color: green; */
  /* background: linear-gradient(to left bottom, #2630f2, #007bff, #00a4ff, #00c4d9, #00ddb3, #00e997, #47f26e, #7df92e, #a3f923, #c2f91e, #def822, #f8f72d); */

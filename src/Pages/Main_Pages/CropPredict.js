@@ -8,6 +8,7 @@ import axios from 'axios';
 import croppredictlogo from '../../static/crop-prediction.json'
 import Lottie from '../../Component/Lottie'
 import Result from './Result';
+import OtherSuggestion from '../../Component/OtherSuggestion.js';
 
 
 
@@ -34,7 +35,7 @@ function CropPredict() {
       .then((dat) => {
 
         console.log(dat)
-        setcrop(dat.data.Predicted)
+        setcrop(dat.data[["Top 5 Predictions"]])
 
       })
       .catch((err) => {
@@ -69,7 +70,7 @@ function CropPredict() {
       <section id='maincontainer'>
         <div id='form-img-wrap'>
           <div id="form-img">
-            <Result crop={cro} />
+            <Result crop={cro[0].Crop} />
           </div>
         </div>
         <div id="form-content">
@@ -99,6 +100,7 @@ function CropPredict() {
                     getPrediction()
                   }}id="crop-pred-btn">Get Prediction</button></div>
 
+
               
               </div>
 
@@ -106,7 +108,10 @@ function CropPredict() {
 
           </div>
 
+
         </section>
+
+        <OtherSuggestion crop={cro} top={cro[0].Crop}/>
 
       </section>
 
