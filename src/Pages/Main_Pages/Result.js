@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 
 
-const Result = ({ crop }) => {
+const Result = ({ crop, confidence }) => {
 
   console.log(crop)
 
@@ -26,6 +26,7 @@ const Result = ({ crop }) => {
               <div key={curr.id}>
                 <img src={curr.src} alt={curr.name} id='result-crop-img'/>
                 <h1 id='result-crop-name-txt'>Predicted Crop: {curr.name}</h1>
+                <span style={{color: 'white', fontSize: '1.5rem', fontWeight: 'bold'}} >Confidence: {confidence}</span>
                 <p  id='result-crop-period-txt'>{curr.Period}</p>
                 <div className='result-desc-txt'>
                 <p className='result-txt' id='result-crop-desc-txt'>{curr.description}</p>

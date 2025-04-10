@@ -70,7 +70,7 @@ function CropPredict() {
       <section id='maincontainer'>
         <div id='form-img-wrap'>
           <div id="form-img">
-            <Result crop={cro[0].Crop} />
+            <Result crop={cro[0].Crop} confidence={cro[0].Confidence} />
           </div>
         </div>
         <div id="form-content">

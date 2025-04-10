@@ -3,8 +3,18 @@ import { myList } from "../static/crop-list.js";
 import '../Styles/Result.css';
 
 const OtherSuggestion = ({ crop, top }) => {
-  const cropNames = Array.isArray(crop) ? crop.map(item => item.Crop) : [];
-  const matchedCrops = myList.filter(c => cropNames.includes(c.name) && c.name !== top);
+  const cropNames = Array.isArray(crop)
+    ? crop.map(item => ({ name: item.Crop, confidence: item.Confidence }))
+    : [];
+
+  const matchedCrops = myList.filter(c => {
+    const match = cropNames.find(item => item.name === c.name && c.name !== top);
+    if (match) {
+      c.confidence = match.confidence;
+      return true;
+    }
+    return false;
+  });
 
   return (
     cropNames.length > 0 && 
@@ -39,6 +49,7 @@ const OtherSuggestion = ({ crop, top }) => {
                 }}
               />
               <p style={{ marginTop: '10px', fontWeight: 'bold', color: 'white', fontSize: '1.4rem' }}>{crop.name}</p>
+              <p style={{ marginTop: '10px', fontWeight: 'bold', color: 'white', fontSize: '1.4rem' }}><span>Confidence: </span> {crop.confidence}</p>
             </div>
           ))}
         </div>
